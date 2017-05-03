@@ -211,6 +211,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="wfAgregarCliente.aspx" />
     <Content Include="wfBase.aspx" />
     <Content Include="wfGrid.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -420,6 +421,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wfAgregarCliente.aspx.cs">
+      <DependentUpon>wfAgregarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfAgregarCliente.aspx.designer.cs">
+      <DependentUpon>wfAgregarCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="wfBase.aspx.cs">
       <DependentUpon>wfBase.aspx</DependentUpon>

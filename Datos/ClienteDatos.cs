@@ -63,6 +63,7 @@ namespace Datos
                 userBD.Cedula = c.Cedula;
                 userBD.Direccion = c.Direccion;
                 userBD.FechaProceso = DateTime.Now;
+                userBD.UsuarioProceso = 1;
                 dc.SaveChanges();
             }
             catch (Exception err)
