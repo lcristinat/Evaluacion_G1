@@ -17,8 +17,6 @@ D:\VSProjects\Evaluacion\Negocio\bin\Debug\Entidad.dll
 D:\VSProjects\Evaluacion\Negocio\bin\Debug\EntityFramework.dll
 D:\VSProjects\Evaluacion\Negocio\bin\Debug\Datos.pdb
 D:\VSProjects\Evaluacion\Negocio\bin\Debug\Entidad.pdb
-D:\VSProjects\Evaluacion\Negocio\bin\Debug\EntityFramework.xml
-D:\VSProjects\Evaluacion\Negocio\bin\Debug\es\EntityFramework.resources.dll
 D:\VSProjects\Evaluacion\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 D:\VSProjects\Evaluacion\Negocio\obj\Debug\Negocio.dll
 D:\VSProjects\Evaluacion\Negocio\obj\Debug\Negocio.pdb

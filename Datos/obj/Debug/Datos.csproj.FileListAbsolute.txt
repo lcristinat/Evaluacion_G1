@@ -12,8 +12,6 @@ D:\VSProjects\Evaluacion\Datos\bin\Debug\Datos.dll
 D:\VSProjects\Evaluacion\Datos\bin\Debug\Datos.pdb
 D:\VSProjects\Evaluacion\Datos\bin\Debug\Entidad.dll
 D:\VSProjects\Evaluacion\Datos\bin\Debug\Entidad.pdb
-D:\VSProjects\Evaluacion\Datos\bin\Debug\EntityFramework.xml
-D:\VSProjects\Evaluacion\Datos\bin\Debug\es\EntityFramework.resources.dll
 D:\VSProjects\Evaluacion\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
 D:\VSProjects\Evaluacion\Datos\obj\Debug\Datos.dll
 D:\VSProjects\Evaluacion\Datos\obj\Debug\Datos.pdb
