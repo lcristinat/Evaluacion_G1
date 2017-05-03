@@ -1,7 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="wfUsuarioAdd.aspx.cs" Inherits="Presentacion.wfUsuarioAdd" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="wfUsuarioInsertar.aspx.cs" Inherits="Presentacion.wfUsuarioInsertar" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
-    <div class="panel panel-default">
+ <div class="panel panel-default">
         <div class="panel-heading">Registrar Usuarios</div>
         <div class="panel-body">
             <fieldset class="form-group">
@@ -39,7 +38,7 @@
                 <br />
                 <div class="col-lg-3">
                      <div class="form-group">
-                        <asp:Button ID="btnValida_Cedula" runat="server" Text="Validar Cèdula" class="btn btn-info" />
+                        <asp:Button ID="btnValida_Cedula" runat="server" Text="Validar Cèdula" class="btn btn-info" OnClick="btnValida_Cedula_Click" />
                      </div>
                 </div>
 
@@ -58,5 +57,4 @@
     </div>
 
 
-    
 </asp:Content>

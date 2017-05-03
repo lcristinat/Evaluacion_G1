@@ -213,7 +213,9 @@
     </Content>
     <Content Include="wfBase.aspx" />
     <Content Include="wfGrid.aspx" />
-    <Content Include="wfUsuarioAdd.aspx" />
+    <Content Include="wfUsuarioActualizar.aspx" />
+    <Content Include="wfUsuarioEliminar.aspx" />
+    <Content Include="wfUsuarioInsertar.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -436,12 +438,26 @@
     <Compile Include="wfGrid.aspx.designer.cs">
       <DependentUpon>wfGrid.aspx</DependentUpon>
     </Compile>
-    <Compile Include="wfUsuarioAdd.aspx.cs">
-      <DependentUpon>wfUsuarioAdd.aspx</DependentUpon>
+    <Compile Include="wfUsuarioActualizar.aspx.cs">
+      <DependentUpon>wfUsuarioActualizar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="wfUsuarioAdd.aspx.designer.cs">
-      <DependentUpon>wfUsuarioAdd.aspx</DependentUpon>
+    <Compile Include="wfUsuarioActualizar.aspx.designer.cs">
+      <DependentUpon>wfUsuarioActualizar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfUsuarioEliminar.aspx.cs">
+      <DependentUpon>wfUsuarioEliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfUsuarioEliminar.aspx.designer.cs">
+      <DependentUpon>wfUsuarioEliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfUsuarioInsertar.aspx.cs">
+      <DependentUpon>wfUsuarioInsertar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfUsuarioInsertar.aspx.designer.cs">
+      <DependentUpon>wfUsuarioInsertar.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

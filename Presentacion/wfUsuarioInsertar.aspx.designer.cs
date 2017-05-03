@@ -10,7 +10,7 @@
 namespace Presentacion {
     
     
-    public partial class wfUsuarioAdd {
+    public partial class wfUsuarioInsertar {
         
         /// <summary>
         /// Control txtPrimerNombre.

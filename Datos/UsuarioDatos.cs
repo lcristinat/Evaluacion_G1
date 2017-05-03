@@ -10,14 +10,15 @@ namespace Datos
     {
         public Entidad.Usuarios GetUsuario(string userLogin)
         {
-
+            // Este método Obtiene de la base de datos un usuario meidante un pàrametro desde la capa de Negocio
+           
             Entidad.BD_EvaluacionEntities dc = null;
             Entidad.Usuarios user = null;
             try
             {
 
                 dc = new Entidad.BD_EvaluacionEntities();
-                user =dc.Usuarios.Where(u => u.login == userLogin).FirstOrDefault();
+                user =dc.Usuarios.Where(u => u.Login == userLogin).FirstOrDefault();
                 return user;
 
             }
@@ -49,7 +50,7 @@ namespace Datos
             try
             {
                 dc = new Entidad.BD_EvaluacionEntities();
-                Entidad.Usuarios usuarioBD = (from x in dc.Usuarios where x.Id == codUsuario select x).FirstOrDefault();
+                Entidad.Usuarios usuarioBD = (from x in dc.Usuarios where x.Usuarios1 == codUsuario select x).FirstOrDefault();
 
                 if (usuarioBD != null)
                 {
@@ -77,9 +78,20 @@ namespace Datos
             }
             catch (Exception err)
             {
-
                 throw (err);
             }
+       }
+
+        public void update(Entidad.Usuarios a)
+        {
+            Entidad.BD_EvaluacionEntities dc = new Entidad.BD_EvaluacionEntities();
+            dc = new Entidad.BD_EvaluacionEntities();
+            Entidad.Usuarios usuarioBD = dc.Usuarios.Where(aBD => aBD.Usuarios1 == a.Usuarios1).FirstOrDefault();
+            usuarioBD.Nombre = a.Nombre;
+            usuarioBD.Login = a.Login;
+            usuarioBD.Clave = a.Clave;
+            usuarioBD.Cedula = a.Cedula;
+            dc.SaveChanges();
 
         }
     }
