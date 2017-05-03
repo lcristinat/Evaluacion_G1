@@ -214,6 +214,8 @@
     </Content>
     <Content Include="wfAgregarCliente.aspx" />
     <Content Include="wfBase.aspx" />
+    <Content Include="wfEditarCliente.aspx" />
+    <Content Include="wfEliminarCliente.aspx" />
     <Content Include="wfGrid.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
@@ -436,6 +438,20 @@
     </Compile>
     <Compile Include="wfBase.aspx.designer.cs">
       <DependentUpon>wfBase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfEditarCliente.aspx.cs">
+      <DependentUpon>wfEditarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfEditarCliente.aspx.designer.cs">
+      <DependentUpon>wfEditarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfEliminarCliente.aspx.cs">
+      <DependentUpon>wfEliminarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfEliminarCliente.aspx.designer.cs">
+      <DependentUpon>wfEliminarCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="wfGrid.aspx.cs">
       <DependentUpon>wfGrid.aspx</DependentUpon>

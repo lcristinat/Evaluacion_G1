@@ -10,6 +10,7 @@
     <Property Name="Direccion" Type="nvarchar" MaxLength="80" Nullable="false" />
     <Property Name="FechaProceso" Type="datetime" Nullable="false" />
     <Property Name="UsuarioProceso" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Empleados">
     <Key>
@@ -21,6 +22,7 @@
     <Property Name="Direccion" Type="nvarchar" MaxLength="80" Nullable="false" />
     <Property Name="FechaProceso" Type="datetime" Nullable="false" />
     <Property Name="UsuarioProceso" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Factura_Detalle">
     <Key>
@@ -58,6 +60,7 @@
     <Property Name="PrecioUnitario" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="FechaProceso" Type="datetime" Nullable="false" />
     <Property Name="UsuarioProceso" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Usuarios">
     <Key>
@@ -69,6 +72,7 @@
     <Property Name="Clave" Type="nvarchar" MaxLength="32" Nullable="false" />
     <Property Name="Cedula" Type="nvarchar" MaxLength="20" Nullable="false" />
     <Property Name="FechaProceso" Type="datetime" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_Factura_Detalle_Facturas">
     <End Role="Facturas" Type="Self.Facturas" Multiplicity="1" />
