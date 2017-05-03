@@ -213,6 +213,7 @@
     </Content>
     <Content Include="wfBase.aspx" />
     <Content Include="wfGrid.aspx" />
+    <Content Include="wfUsuarioAdd.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -434,6 +435,13 @@
     </Compile>
     <Compile Include="wfGrid.aspx.designer.cs">
       <DependentUpon>wfGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfUsuarioAdd.aspx.cs">
+      <DependentUpon>wfUsuarioAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfUsuarioAdd.aspx.designer.cs">
+      <DependentUpon>wfUsuarioAdd.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
