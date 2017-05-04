@@ -109,5 +109,33 @@ namespace Negocio
 
         } // fin del método obtenerProductoNegocio
 
+        public List<Entidad.Productos> obtenerProductoNegocio()
+        {
+
+            Datos.productoDatos dc = null;
+            List<Entidad.Productos> producto = null;
+
+            try
+            {
+
+                // Este método invoca al método obtenerProductoDatos de la capa
+                // de datos para buscar un producto en la base de datos
+
+                dc = new Datos.productoDatos();
+                producto = dc.obtenerProductoDatos();
+
+                return producto;
+
+            }
+            catch (Exception err)
+            {
+
+                throw err;
+            }
+
+
+        } // fin del método obtenerProductoNegocio
+
+
     } // fin de la clase productoNegocio
 }

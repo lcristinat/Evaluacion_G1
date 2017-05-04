@@ -98,6 +98,33 @@ namespace Datos
 
         } // fin del método obtenerProductoDatos
 
+        public List<Entidad.Productos> obtenerProductoDatos()
+        {
+
+            // Este método recupera la información de un producto con base
+            // en el id del mismo, recibido como parámetro desde la capa de negocio
+
+            Entidad.BD_EvaluacionEntities dc = null;
+            List<Entidad.Productos> producto = null;
+
+            try
+            {
+
+                dc = new Entidad.BD_EvaluacionEntities();
+                producto = dc.Productos.ToList();
+
+                return producto;
+
+            }
+            catch (Exception err)
+            {
+
+                throw err;
+            }
+
+        } // fin del método obtenerProductoDatos
+
+
         public void eliminarProductoDatos(int id)
         {
 

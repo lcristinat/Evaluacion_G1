@@ -26,7 +26,7 @@ namespace Presentacion
             txtDescripcion.Text = string.Empty;
             txtExistencia.Text = string.Empty;
             txtPrecio.Text = string.Empty;
-
+            
         } // fin del método limpiarFormulario
 
         /*protected void btnCancelar_Click(object sender, EventArgs e)
@@ -52,6 +52,7 @@ namespace Presentacion
                 producto.Existencia = int.Parse(txtExistencia.Text);
                 producto.PrecioUnitario = decimal.Parse(txtPrecio.Text);
                 producto.FechaProceso = DateTime.Now;
+                producto.Estado = 1;
                 producto.UsuarioProceso = 1;
 
                 dc.insertarProductoNegocio(producto);
@@ -73,8 +74,10 @@ namespace Presentacion
 
         protected void btnCancelar_Click1(object sender, EventArgs e)
         {
-            limpiarFormulario();
 
+            lblResultado.InnerText = string.Empty;
+            limpiarFormulario();
+            
         } // fin del btnCancelar
 
     } // clase wfProductoInsertar

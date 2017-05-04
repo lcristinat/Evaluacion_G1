@@ -39,15 +39,15 @@
                     </div>
                 </div>
     
-                <div class="col-lg-3">
+                <div class="col-lg-12">
                     <div class="form-group">
 
-                        <asp:CustomValidator ID="cvErrores" runat="server" ErrorMessage="Ocurrió un error al guardar" Font-Bold="True" ForeColor="Red">*</asp:CustomValidator>
+                        <asp:CustomValidator ID="cvErrores" runat="server" ErrorMessage="Ocurrió un error al guardar" Font-Bold="True" ForeColor="Red" Text="Ocurrió un error al guardar"></asp:CustomValidator>
          
                     </div>
                 </div>
     
-                <div class="col-lg-3">
+                <div class="col-lg-12">
                     <div class="form-group">
 
                         <label id="lblResultado" runat="server" class="color:Blue;"></label> 
@@ -60,7 +60,7 @@
           <br />
             <div class="col-lg-4">
                 <div class="form-group">
-                    <asp:Button ID="btnConfirmar" runat="server" Text="Confirmar" class="btn btn-danger" OnClick="btnConfirmar_Click1"/>
+                    <asp:Button ID="btnConfirmar" runat="server" Text="Guardar" class="btn btn-success" OnClick="btnConfirmar_Click1"/>
                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-default" OnClick="btnCancelar_Click1" />
                 </div>
             </div>

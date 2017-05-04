@@ -12,7 +12,7 @@ namespace Presentacion
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            btnConfirmar.Enabled = false;
+            btnConfirmar.Visible = false;
 
         }
 
@@ -37,8 +37,8 @@ namespace Presentacion
             txtDescripcion.Text = string.Empty;
             txtExistencia.Text = string.Empty;
             txtPrecioUnitario.Text = string.Empty;
-            btnConfirmar.Enabled = false;
-            lblResultado.Text = string.Empty;
+            btnConfirmar.Visible = false;
+            lblResultado.InnerText = string.Empty;
 
 
         } // fin del método limpiarFormulario
@@ -72,18 +72,18 @@ namespace Presentacion
 
                 dc.modificarProductoNegocio(producto);
 
-                lblResultado.Text = "La información se actualizó exitosamente.";
-
                 // Limpiamos el formulario
 
                 limpiarFormulario();
+
+                lblResultado.InnerText = "La información se actualizó exitosamente.";
 
             }
             catch (Exception)
             {
 
                 cvErrores.IsValid = false;
-                cvErrores.ErrorMessage = "Ocurrió un error al intentar actualizar la información.";
+                cvErrores.ErrorMessage = "Ocurrió un error al intentar actualizar la información. Por favor verifique.";
 
             } // fin del try
 
@@ -108,7 +108,7 @@ namespace Presentacion
                 txtExistencia.Text = producto.Existencia.ToString();
                 txtPrecioUnitario.Text = producto.PrecioUnitario.ToString();
 
-                btnConfirmar.Enabled = true;
+                btnConfirmar.Visible = true;
 
             }
             catch (Exception)

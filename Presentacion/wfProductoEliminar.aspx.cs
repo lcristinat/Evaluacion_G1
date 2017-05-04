@@ -11,7 +11,7 @@ namespace Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            btnConfirmar.Enabled = false;
+            btnConfirmar.Visible = false;
         }
 
         /*protected void btnBuscar_Click(object sender, EventArgs e)
@@ -50,9 +50,10 @@ namespace Presentacion
                 dc = new Negocio.productoNegocio();
 
                 dc.eliminarProductoNegocio(int.Parse(txtCodigoProducto.Text));
-
-                lblResultado.Text = "Se eliminó correctamente el producto de la base de datos.";
+                                
                 limpiarFormulario();
+
+                lblResultado.InnerText = "Se eliminó correctamente el producto de la base de datos.";
 
             }
             catch (Exception)
@@ -79,7 +80,7 @@ namespace Presentacion
 
                 lblDescripcion.Text = producto.Descripcion;
 
-                btnConfirmar.Enabled = true;
+                btnConfirmar.Visible = true;
 
             }
             catch (Exception)

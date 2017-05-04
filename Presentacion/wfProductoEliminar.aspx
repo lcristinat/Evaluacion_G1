@@ -15,7 +15,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-lg-12">
                     <div class="form-group">
                         
                         <asp:Label ID="lblDescripcion" runat="server" Font-Bold="True"></asp:Label>
@@ -23,26 +23,18 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-lg-12">
                     <div class="form-group">
                         
                         <asp:CustomValidator ID="cvErrores" runat="server" Font-Bold="True" ForeColor="Red"></asp:CustomValidator>
                         
                     </div>
                 </div>
-
-                <div class="col-lg-3">
+                                
+                 <div class="col-lg-12">
                     <div class="form-group">
                         
-                        <asp:ValidationSummary ID="ValidationSummary1" runat="server" Font-Bold="True" ForeColor="Red" />
-                        
-                    </div>
-                </div>
-
-                 <div class="col-lg-3">
-                    <div class="form-group">
-                        
-                        <asp:Label ID="lblResultado" runat="server" Font-Bold="True" ForeColor="#0066CC"></asp:Label>
+                        <label id="lblResultado" runat="server" class="color:Blue;"></label> 
                         
                     </div>
                 </div>
@@ -52,7 +44,7 @@
             <br />
             <div class="col-lg-4">
                 <div class="form-group">
-                    <asp:Button ID="btnConfirmar" runat="server" Text="Confirmar" class="btn btn-danger" OnClick="btnConfirmar_Click1" />
+                    <asp:Button ID="btnConfirmar" runat="server" Text="Eliminar" class="btn btn-danger" OnClick="btnConfirmar_Click1" />
                     <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-info" OnClick="btnBuscar_Click1" />
                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-default" OnClick="btnCancelar_Click1" />
                 </div>
