@@ -17,8 +17,9 @@
               <div class="col-lg-3">
                    <div class="form-group">
                       <label class="control-label">Cliente</label>
-                        <asp:TextBox ID="txtCliente" runat="server" class="form-control" placeholder="Cliente" required="Es necesario Digitar un Codigo"></asp:TextBox>
-                       <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-success" OnClick="btnBuscar_Click" />
+                        <asp:TextBox ID="txtCliente" runat="server" class="form-control" placeholder="Cliente" required="Es necesario Digitar un Codigo" ></asp:TextBox>
+                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-success" OnClick="btnBuscar_Click" />
+                        
                   </div>
                   </div>
 
