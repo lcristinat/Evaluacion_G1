@@ -11,6 +11,7 @@
     <Property Name="FechaProceso" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UsuarioProceso" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Facturas" Relationship="Self.FK_Facturas_Clientes" FromRole="Clientes" ToRole="Facturas" />
+    <Property Name="Estado" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="Empleados">
     <Key>
@@ -22,6 +23,7 @@
     <Property Name="Direccion" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="FechaProceso" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UsuarioProceso" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="Factura_Detalle">
     <Key>
@@ -64,6 +66,7 @@
     <Property Name="FechaProceso" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UsuarioProceso" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Factura_Detalle" Relationship="Self.FK_Factura_Detalle_Productos" FromRole="Productos" ToRole="Factura_Detalle" />
+    <Property Name="Estado" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="Usuarios">
     <Key>
@@ -75,6 +78,7 @@
     <Property Name="Clave" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Cedula" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="FechaProceso" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Estado" Type="Int32" Nullable="false" />
   </EntityType>
   <Association Name="FK_Facturas_Clientes">
     <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />

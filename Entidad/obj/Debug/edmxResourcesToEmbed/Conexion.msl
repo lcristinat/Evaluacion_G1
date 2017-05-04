@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Clientes">
       <EntityTypeMapping TypeName="BD_EvaluacionModel.Clientes">
         <MappingFragment StoreEntitySet="Clientes">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Cedula" ColumnName="Cedula" />
@@ -16,6 +17,7 @@
     <EntitySetMapping Name="Empleados">
       <EntityTypeMapping TypeName="BD_EvaluacionModel.Empleados">
         <MappingFragment StoreEntitySet="Empleados">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Cedula" ColumnName="Cedula" />
@@ -56,6 +58,7 @@
     <EntitySetMapping Name="Productos">
       <EntityTypeMapping TypeName="BD_EvaluacionModel.Productos">
         <MappingFragment StoreEntitySet="Productos">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
           <ScalarProperty Name="Existencia" ColumnName="Existencia" />
@@ -68,6 +71,7 @@
     <EntitySetMapping Name="Usuarios">
       <EntityTypeMapping TypeName="BD_EvaluacionModel.Usuarios">
         <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
           <ScalarProperty Name="Usuarios1" ColumnName="Usuarios" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Login" ColumnName="Login" />
