@@ -22,3 +22,15 @@ D:\VSProjects\Evaluacion\Entidad\bin\Debug\es\EntityFramework.SqlServer.resource
 D:\VSProjects\Evaluacion\Entidad\obj\Debug\Entidad.csprojResolveAssemblyReference.cache
 D:\VSProjects\Evaluacion\Entidad\obj\Debug\Entidad.dll
 D:\VSProjects\Evaluacion\Entidad\obj\Debug\Entidad.pdb
+C:\evalua\Entidad\bin\Debug\Entidad.dll.config
+C:\evalua\Entidad\bin\Debug\Entidad.dll
+C:\evalua\Entidad\bin\Debug\Entidad.pdb
+C:\evalua\Entidad\bin\Debug\EntityFramework.dll
+C:\evalua\Entidad\bin\Debug\EntityFramework.SqlServer.dll
+C:\evalua\Entidad\bin\Debug\EntityFramework.xml
+C:\evalua\Entidad\bin\Debug\EntityFramework.SqlServer.xml
+C:\evalua\Entidad\bin\Debug\es\EntityFramework.resources.dll
+C:\evalua\Entidad\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\evalua\Entidad\obj\Debug\Entidad.csprojResolveAssemblyReference.cache
+C:\evalua\Entidad\obj\Debug\Entidad.dll
+C:\evalua\Entidad\obj\Debug\Entidad.pdb
