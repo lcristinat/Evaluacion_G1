@@ -27,8 +27,8 @@
             <div class="col-lg-4">
                 <div class="form-group">
                     <asp:Button ID="btnConfirmar" runat="server" Text="Confirmar" class="btn btn-danger" />
-                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar" class="btn btn-info" />
-                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-default" />
+                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar" class="btn btn-info" OnClick="btnLimpiar_Click"/>
+                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-default" OnClick="btnCancelar_Click" />
                 </div>
             </div>
         </div>

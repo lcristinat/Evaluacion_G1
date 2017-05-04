@@ -7,20 +7,23 @@
                 <div class="col-lg-3">
                     <div class="form-group">
                         <label class="control-label">Id</label>
-                        <asp:TextBox ID="txtIdCliente" runat="server" class="form-control" placeholder="Codigo del Cliente" required></asp:TextBox>
+  
+                        <asp:TextBox ID="txtIdCliente" runat="server" class="form-control" required OnTextChanged="txtIdCliente_TextChanged" AutoPostBack="True"></asp:TextBox>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group">
-                        <label class="control-label">Nombre del Cliente</label>
+                        <label class="control-label">Nombre del Cliente>
                         <asp:TextBox ID="txtNombre" runat="server" class="form-control" placeholder="Nombre del Cliente" ReadOnly ="true"></asp:TextBox>
                     </div>
                 </div>
+                </label>
             </fieldset>
             <br />
             <div class="col-lg-4">
                 <div class="form-group">
-                    <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn bg-olive btn-lg btn-block" />
+                    <asp:Button ID="btnEliminar" runat="server" Visible="false" Text="Eliminar" class="btn bg-olive btn-lg btn-block" OnClick="btnEliminar_Click" />
+                    <asp:Label ID="lblMensaje" runat="server" Text="Label"></asp:Label>
                 </div>
             </div>
         </div>

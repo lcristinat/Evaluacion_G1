@@ -19,6 +19,6 @@ D:\VSProjects\Evaluacion\Entidad\bin\Debug\EntityFramework.xml
 D:\VSProjects\Evaluacion\Entidad\bin\Debug\EntityFramework.SqlServer.xml
 D:\VSProjects\Evaluacion\Entidad\bin\Debug\es\EntityFramework.resources.dll
 D:\VSProjects\Evaluacion\Entidad\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+D:\VSProjects\Evaluacion\Entidad\obj\Debug\Entidad.csprojResolveAssemblyReference.cache
 D:\VSProjects\Evaluacion\Entidad\obj\Debug\Entidad.dll
 D:\VSProjects\Evaluacion\Entidad\obj\Debug\Entidad.pdb
-D:\VSProjects\Evaluacion\Entidad\obj\Debug\Entidad.csprojResolveAssemblyReference.cache

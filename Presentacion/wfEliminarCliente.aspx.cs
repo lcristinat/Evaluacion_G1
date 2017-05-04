@@ -13,5 +13,59 @@ namespace Presentacion
         {
 
         }
+
+        protected void ObtenerCliente(int pIdCliente)
+        {
+            Negocio.ClienteNegocio dc = new Negocio.ClienteNegocio();
+
+            try
+            {
+                Entidad.Clientes c = dc.ObtenerCliente(pIdCliente);
+                txtIdCliente.Text = c.Id.ToString();
+                txtNombre.Text = c.Nombre;
+                btnEliminar.Visible = true;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        protected void txtIdCliente_TextChanged(object sender, EventArgs e)
+        {
+            int idCliente;
+
+            if (txtIdCliente.Text != "")
+            {
+                idCliente = int.Parse(txtIdCliente.Text);
+                ObtenerCliente(idCliente);
+            }
+            
+        }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+            Negocio.ClienteNegocio dc = new Negocio.ClienteNegocio();
+
+            try
+            {
+                Entidad.Clientes c = dc.ObtenerCliente(int.Parse(txtIdCliente.Text));
+               
+                if (txtIdCliente.Text != "")
+                {
+                    dc.EliminarCliente(c);
+                    lblMensaje.Text = "El registro ha sido eliminado";
+                }
+                
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }
