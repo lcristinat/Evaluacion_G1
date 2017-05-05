@@ -21,6 +21,7 @@ namespace Negocio
             {
                 nc.FechaProceso = DateTime.Now;
                 nc.Estado = 1;
+                nc.UsuarioProceso = 1;
                 dc.InsertarCliente(nc);  
             }
             catch (Exception err)
@@ -41,7 +42,6 @@ namespace Negocio
             try
             {
                 nc.FechaProceso = DateTime.Now;
-                nc.UsuarioProceso = 1;
                 dc.ActualizarCliente(nc);
             }
             catch (Exception)
@@ -93,6 +93,39 @@ namespace Negocio
                 throw err;
             }
         }
+
+        public string ValidarCedula(string numeroCedula)
+        {
+            string respuesta = "";
+            ServiciosUCA.ServiciosUcaClient ws = new ServiciosUCA.ServiciosUcaClient();
+
+            try
+            {
+                string resp = ws.ValidarCedula(numeroCedula);
+                if (resp == "1")
+                {
+                    respuesta = "1";
+                }
+                else
+                {
+                    respuesta = "2";
+                }
+            }
+            catch (Exception err)
+            {
+                throw (err);
+            }
+
+            return respuesta;
+        }
+
+        public List<Entidad.Clientes> ListaClientes()
+        {
+            Datos.ClienteDatos dc = new Datos.ClienteDatos();
+            return dc.ListaClientes();
+        }
+
+
     }
 
 }
