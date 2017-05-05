@@ -6,6 +6,7 @@
         <div class="panel-body">
             <fieldset class="form-group">
                 <legend>Datos Generales</legend>
+                <div class="row">
                 <div class="col-lg-3">
                     <div class="form-group">
                         
@@ -14,8 +15,7 @@
                         <asp:RequiredFieldValidator ID="rfvCodigo" runat="server" ErrorMessage="El campo código es requerido" ControlToValidate="txtCodigoProducto" Font-Bold="True" ForeColor="Red">*</asp:RequiredFieldValidator>
 
                         <asp:TextBox ID="txtCodigoProducto" runat="server" class="form-control" placeholder="Código de producto"></asp:TextBox>
-                                                
-                                                
+                                                                                                
                         </div>
                 </div>
                 
@@ -45,13 +45,19 @@
 
                         </div>
                 </div>
-
-                <div class="col-lg-12">
+                </div>
+                <div class="row">
+                    
+                    <div class="col-lg-3">
                     <div class="form-group">
                         
                         <asp:CustomValidator ID="cvErrores" runat="server" ErrorMessage="Ocurrió un error" Font-Bold="True" ForeColor="Red"></asp:CustomValidator>
                         </div>
                 </div>
+
+
+                </div>
+                
                            
                 <div class="col-lg-12">
                     <div class="form-group">

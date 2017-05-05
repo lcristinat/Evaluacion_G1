@@ -10,7 +10,7 @@
 
                 <div class="col-lg-3">
                     <div class="form-group">
-                        <rsweb:ReportViewer ID="rptvwReporte" runat="server" Width="1225px">
+                        <rsweb:ReportViewer ID="rptvwReporte" runat="server" Width="1009px">
                         </rsweb:ReportViewer>
                         
                     </div>

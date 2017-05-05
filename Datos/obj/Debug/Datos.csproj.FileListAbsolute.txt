@@ -1,13 +1,3 @@
-C:\EvaGrupo1\Sistema_Evaluacion\Datos\bin\Debug\Datos.dll
-C:\EvaGrupo1\Sistema_Evaluacion\Datos\bin\Debug\Datos.pdb
-C:\EvaGrupo1\Sistema_Evaluacion\Datos\bin\Debug\Entidad.dll
-C:\EvaGrupo1\Sistema_Evaluacion\Datos\bin\Debug\EntityFramework.dll
-C:\EvaGrupo1\Sistema_Evaluacion\Datos\bin\Debug\Entidad.pdb
-C:\EvaGrupo1\Sistema_Evaluacion\Datos\bin\Debug\EntityFramework.xml
-C:\EvaGrupo1\Sistema_Evaluacion\Datos\bin\Debug\es\EntityFramework.resources.dll
-C:\EvaGrupo1\Sistema_Evaluacion\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
-C:\EvaGrupo1\Sistema_Evaluacion\Datos\obj\Debug\Datos.dll
-C:\EvaGrupo1\Sistema_Evaluacion\Datos\obj\Debug\Datos.pdb
 C:\Users\Sistemas\Desktop\evaluacion_g1\Datos\bin\Debug\Datos.dll
 C:\Users\Sistemas\Desktop\evaluacion_g1\Datos\bin\Debug\Datos.pdb
 C:\Users\Sistemas\Desktop\evaluacion_g1\Datos\bin\Debug\Entidad.dll
@@ -15,3 +5,10 @@ C:\Users\Sistemas\Desktop\evaluacion_g1\Datos\bin\Debug\Entidad.pdb
 C:\Users\Sistemas\Desktop\evaluacion_g1\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
 C:\Users\Sistemas\Desktop\evaluacion_g1\Datos\obj\Debug\Datos.dll
 C:\Users\Sistemas\Desktop\evaluacion_g1\Datos\obj\Debug\Datos.pdb
+C:\EvaGrupo1\Sistema_Evaluacion\Datos\bin\Debug\Datos.dll
+C:\EvaGrupo1\Sistema_Evaluacion\Datos\bin\Debug\Datos.pdb
+C:\EvaGrupo1\Sistema_Evaluacion\Datos\bin\Debug\Entidad.dll
+C:\EvaGrupo1\Sistema_Evaluacion\Datos\bin\Debug\Entidad.pdb
+C:\EvaGrupo1\Sistema_Evaluacion\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\EvaGrupo1\Sistema_Evaluacion\Datos\obj\Debug\Datos.dll
+C:\EvaGrupo1\Sistema_Evaluacion\Datos\obj\Debug\Datos.pdb
