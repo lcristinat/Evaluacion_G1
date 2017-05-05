@@ -42,7 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="productoDatos.cs" />
+=======
+    <Compile Include="ClienteDatos.cs" />
+    <Compile Include="FacturaDatos.cs" />
+    <Compile Include="FacturaDetalleDatos.cs" />
+>>>>>>> bfb342136a09d91ccdb5342b479bde55e80003bf
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

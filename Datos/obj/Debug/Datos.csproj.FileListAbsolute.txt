@@ -12,3 +12,17 @@ C:\EvaGrupo1\Sistema_Evaluacion\Datos\bin\Debug\Entidad.pdb
 C:\EvaGrupo1\Sistema_Evaluacion\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
 C:\EvaGrupo1\Sistema_Evaluacion\Datos\obj\Debug\Datos.dll
 C:\EvaGrupo1\Sistema_Evaluacion\Datos\obj\Debug\Datos.pdb
+D:\VSProjects\Evaluacion\Datos\bin\Debug\Datos.dll
+D:\VSProjects\Evaluacion\Datos\bin\Debug\Datos.pdb
+D:\VSProjects\Evaluacion\Datos\bin\Debug\Entidad.dll
+D:\VSProjects\Evaluacion\Datos\bin\Debug\Entidad.pdb
+D:\VSProjects\Evaluacion\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+D:\VSProjects\Evaluacion\Datos\obj\Debug\Datos.dll
+D:\VSProjects\Evaluacion\Datos\obj\Debug\Datos.pdb
+C:\evalua\Datos\bin\Debug\Datos.dll
+C:\evalua\Datos\bin\Debug\Datos.pdb
+C:\evalua\Datos\bin\Debug\Entidad.dll
+C:\evalua\Datos\bin\Debug\Entidad.pdb
+C:\evalua\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\evalua\Datos\obj\Debug\Datos.dll
+C:\evalua\Datos\obj\Debug\Datos.pdb

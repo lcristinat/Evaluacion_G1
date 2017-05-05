@@ -33,6 +33,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,7 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="productoNegocio.cs" />
+=======
+    <Compile Include="ClienteNegocio.cs" />
+    <Compile Include="FacturaDetalleNegocio.cs" />
+    <Compile Include="FacturaNegocio.cs" />
+>>>>>>> bfb342136a09d91ccdb5342b479bde55e80003bf
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
