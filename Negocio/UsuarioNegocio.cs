@@ -8,8 +8,34 @@ using System.Threading.Tasks;
 
 namespace Negocio
 {
-   public class UsuarioNegocio1
+   public class UsuarioNegocio
     {
+        //public int BuscarUsuario(int codigo_usua)
+        //{
+        //    int respuesta = 0;
+        //    Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
+        //    Entidad.Usuarios usuario = dc.GetUsuario(login);
+        //    if (usuario != null)
+        //    {
+        //        string Clave_Encrip = CreateMD5(clave);
+
+        //        //if (usuario.clave!=clave)
+        //        if (usuario.Clave != Clave_Encrip)
+        //        {
+        //            respuesta = 1;
+        //        }
+        //        else
+        //            if (usuario.Clave == "EVALUACION")
+        //        {
+        //            respuesta = 2;
+        //        }
+        //        else
+        //        {
+        //            respuesta = 3;
+        //        }
+        //    }
+        //    return respuesta;
+        //}
         public int ConsultaUsuario(string login, string clave)
         {
             int respuesta = 0;
@@ -25,7 +51,7 @@ namespace Negocio
                     respuesta = 1;
                 }
                 else
-                    if (usuario.Clave == "123")
+                    if (usuario.Clave == "EVALUACION")
                 {
                     respuesta = 2;
                 }
@@ -69,14 +95,16 @@ namespace Negocio
             try
             {
                 string resp = "";
-                Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
-                Entidad.Usuarios userBD = dc.GetUsuario(Usua.Login);
-                if (userBD == null)
-                {
-                    Usua.Clave = CreateMD5(Usua.Clave);
-                    dc.Insert(Usua);
-                    resp = "1";
-                }
+               
+                    Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
+                    Entidad.Usuarios userBD = dc.GetUsuario(Usua.Login);
+                    if (userBD == null)
+                    {
+                        Usua.Clave = CreateMD5(Usua.Clave);
+                        dc.Insert(Usua);
+                        resp = "1";
+                    }
+                
                 return resp;
 
             }

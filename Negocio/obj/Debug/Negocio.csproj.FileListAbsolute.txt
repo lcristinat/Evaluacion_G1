@@ -10,3 +10,4 @@ C:\EvaGrupo1\Sistema_Evaluacion\Negocio\bin\Debug\es\EntityFramework.resources.d
 C:\EvaGrupo1\Sistema_Evaluacion\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 C:\EvaGrupo1\Sistema_Evaluacion\Negocio\obj\Debug\Negocio.dll
 C:\EvaGrupo1\Sistema_Evaluacion\Negocio\obj\Debug\Negocio.pdb
+C:\EvaGrupo1\Sistema_Evaluacion\Negocio\bin\Debug\Negocio.dll.config

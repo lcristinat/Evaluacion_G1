@@ -13,22 +13,49 @@ namespace Presentacion
         {
 
         }
-
-        protected void btnValida_Cedula_Click(object sender, EventArgs e)
+        protected void Limpiar()
         {
-            //try
-            //{
-            //    Negocio.Web_Services_Negocio dc = new Negocio.Web_Services_Negocio();
-            //    lbl_Mensaje.Text = dc.ValidaCedula(txtNumeroCedula.Text.Trim()) == "1" ? "Válida" : "Inválida";
-            //}
-            //catch (Exception err)
-            //{
-
-            //    //throw;
-            //    CV_Datos.IsValid = true;
-            //    CV_Datos.ErrorMessage = "Error al conectarse al servicio WEB" + err;
-
-            //}
+            txtNombre.Text = "";
+            txtNumeroCedula.Text = "";
+            txtLogin.Text = "";
+            txtClave.Text = "";
         }
+
+        protected void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String cadena_cedula = txtNumeroCedula.Text.Trim().ToUpper();
+                cadena_cedula = cadena_cedula.Replace("-", "");
+                string NCedula;
+                
+                Negocio.web_Services_Negocio dc_s = new Negocio.web_Services_Negocio();
+                NCedula = dc_s.ValidaCedula(cadena_cedula);
+                if (NCedula == "1")
+                {
+                    Negocio.UsuarioNegocio dc = new Negocio.UsuarioNegocio();
+                    Entidad.Usuarios u = new Entidad.Usuarios();
+                    u.Nombre = txtNombre.Text.Trim();
+                    u.Login = txtLogin.Text.Trim();
+                    u.Clave = txtClave.Text.Trim();
+                    u.Cedula = cadena_cedula;
+                    u.FechaProceso = DateTime.Now;
+                    u.Estado = 1;
+                    dc.Agregar(u);
+                    lblMensaje.Text = "Usuario Creado con Éxito";
+                }
+                else
+                {
+                    lblMensaje.Text = "Usuario no puede Crearse porque cèdula no es correcta";
+                }
+                
+            }
+            catch (Exception err)
+            {
+                CV_Datos.IsValid = false;
+                CV_Datos.ErrorMessage = "Error al registrar los datos" + err;
+            }
+        }
+           
     }
 }

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e2a5dccf-c40d-434b-a058-80981022d945" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://webservices.uca.edu.ni:8081/ServiciosUca.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiciosUca.wsdl" MetadataType="Wsdl" ID="267a55f5-9498-4d78-b554-2e46a9e2f39d" SourceId="1" SourceUrl="http://webservices.uca.edu.ni:8081/ServiciosUca.svc?wsdl" />
+    <MetadataFile FileName="ServiciosUca.disco" MetadataType="Disco" ID="a647b2ff-734b-4d1d-9604-0eb19e714480" SourceId="1" SourceUrl="http://webservices.uca.edu.ni:8081/ServiciosUca.svc?disco" />
+    <MetadataFile FileName="ServiciosUca.xsd" MetadataType="Schema" ID="e5459c48-6d54-4f9d-a0bb-6b43a1be0cfe" SourceId="1" SourceUrl="http://webservices.uca.edu.ni:8081/ServiciosUca.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiciosUca1.xsd" MetadataType="Schema" ID="754b6cc1-732d-4eee-84ea-699e5a3b3112" SourceId="1" SourceUrl="http://webservices.uca.edu.ni:8081/ServiciosUca.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiciosUca2.xsd" MetadataType="Schema" ID="284de3eb-54b6-4d8d-acdf-41098b48f2b9" SourceId="1" SourceUrl="http://webservices.uca.edu.ni:8081/ServiciosUca.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
