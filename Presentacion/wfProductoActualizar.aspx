@@ -46,14 +46,14 @@
                         </div>
                 </div>
 
-                <div class="col-lg-12">
+                <div class="col-lg-3">
                     <div class="form-group">
                         
                         <asp:CustomValidator ID="cvErrores" runat="server" ErrorMessage="Ocurrió un error" Font-Bold="True" ForeColor="Red"></asp:CustomValidator>
                         </div>
                 </div>
                            
-                <div class="col-lg-12">
+                <div class="col-lg-3">
                     <div class="form-group">
                         
                         <label id="lblResultado" runat="server" class="color:Blue"></label> 

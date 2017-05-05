@@ -39,7 +39,7 @@
                     </div>
                 </div>
     
-                <div class="col-lg-12">
+                <div class="col-lg-3">
                     <div class="form-group">
 
                         <asp:CustomValidator ID="cvErrores" runat="server" ErrorMessage="Ocurrió un error al guardar" Font-Bold="True" ForeColor="Red" Text="Ocurrió un error al guardar"></asp:CustomValidator>
@@ -47,7 +47,7 @@
                     </div>
                 </div>
     
-                <div class="col-lg-12">
+                <div class="col-lg-3">
                     <div class="form-group">
 
                         <label id="lblResultado" runat="server" class="color:Blue;"></label> 
