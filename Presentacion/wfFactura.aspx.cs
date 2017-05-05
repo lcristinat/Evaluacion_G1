@@ -21,8 +21,30 @@ namespace Presentacion
         }
         protected void CargarProducto()
         {
+            
+            Negocio.ProductoNegocio dc = new Negocio.ProductoNegocio();
+            List<Entidad.Productos> productos = dc.ListaProducto();
+           
 
+            if (productos.Count > 0)
+            {
+                ListItem sel = new ListItem();
+                sel.Value = "0";
+                sel.Text = "Seleccione...";
+                ddlProducto.Items.Add(sel);
+                ddlProducto.DataSource = productos;
+                ddlProducto.DataTextField = "descripcion";
+                ddlProducto.DataValueField = "Id";
+                ddlProducto.DataBind();
+            } //cierra IF carreras tiene datos validos...
+            else
+            {
+                cvDatos.IsValid = false;
+                cvDatos.ErrorMessage = "No hay datos en el catalogo de productos";
+                btnAgregar.Enabled = false;
+            } //cierra ELSE de validacion de carreras...
         }
+  
 
 
         #region/*PAGINACION GRIDVIEW*/
@@ -31,21 +53,21 @@ namespace Presentacion
             TextBox _IraPag = (TextBox)sender;
             int _NumPag = 0;
 
-            if (int.TryParse(_IraPag.Text, out _NumPag) && _NumPag > 0 && _NumPag <= this.gvUsuarios.PageCount)
+            if (int.TryParse(_IraPag.Text, out _NumPag) && _NumPag > 0 && _NumPag <= this.gvFaturaDetalle.PageCount)
             {
-                if (int.TryParse(_IraPag.Text, out _NumPag) && _NumPag > 0 && _NumPag <= this.gvUsuarios.PageCount)
+                if (int.TryParse(_IraPag.Text, out _NumPag) && _NumPag > 0 && _NumPag <= this.gvFaturaDetalle.PageCount)
                 {
-                    this.gvUsuarios.PageIndex = _NumPag - 1;
+                    this.gvFaturaDetalle.PageIndex = _NumPag - 1;
                     CargarProducto();
                 }
                 else
                 {
-                    this.gvUsuarios.PageIndex = 0;
+                    this.gvFaturaDetalle.PageIndex = 0;
                     CargarProducto();
                 }
             }
 
-            this.gvUsuarios.SelectedIndex = -1;
+            this.gvFaturaDetalle.SelectedIndex = -1;
         }
 
         private int getpageindex(GridView gv, string clave)
@@ -76,21 +98,21 @@ namespace Presentacion
             }
         }
 
-        protected void gvUsuarios_RowDataBound(object sender, GridViewRowEventArgs e)
+        protected void gvFaturaDetalle_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.Pager)
             {
                 //PAGINADO
                 //TOTAL PAGINAS
                 Label _TotalPags = (Label)e.Row.FindControl("lblTotalNumberOfPages");
-                _TotalPags.Text = gvUsuarios.PageCount.ToString();
+                _TotalPags.Text = gvFaturaDetalle.PageCount.ToString();
                 // IR A PAGINA
                 TextBox _IraPag = (TextBox)e.Row.FindControl("IraPag");
-                _IraPag.Text = (gvUsuarios.PageIndex + 1).ToString();
+                _IraPag.Text = (gvFaturaDetalle.PageIndex + 1).ToString();
 
                 // ASIGNA AL DROPDOWNLIST COMO VALOR SELECCIONADO EL PAGESIZE ACTUAL
                 DropDownList _DropDownList = (DropDownList)e.Row.FindControl("RegsPag");
-                _DropDownList.SelectedValue = gvUsuarios.PageSize.ToString();
+                _DropDownList.SelectedValue = gvFaturaDetalle.PageSize.ToString();
             }
             else if (e.Row.RowType == DataControlRowType.DataRow)
             {
@@ -106,21 +128,21 @@ namespace Presentacion
             //OBTIENE EL NUMERO ELEGIDO
             DropDownList _DropDownList = (DropDownList)sender;
             // CAMBIA EL PAGESIZE DEL GRID ASIGNANDO EL ELEGIDO
-            gvUsuarios.PageSize = int.Parse(_DropDownList.SelectedValue);
+            gvFaturaDetalle.PageSize = int.Parse(_DropDownList.SelectedValue);
             CargarProducto();
         }
 
-        protected void gvUsuarios_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        protected void gvFaturaDetalle_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             if (e.NewPageIndex >= 0)
             {
-                gvUsuarios.PageIndex = e.NewPageIndex;
+                gvFaturaDetalle.PageIndex = e.NewPageIndex;
                 CargarProducto();
             }
         }
         #endregion
 
-        protected void gvUsuarios_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void gvFaturaDetalle_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             string identificador = e.CommandArgument.ToString();
             if (e.CommandName == "ELIMINAR")
@@ -161,6 +183,70 @@ namespace Presentacion
             
         }
 
-      
+        protected void ddlProducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+                Entidad.Productos producto = new Entidad.Productos();
+                List<Entidad.Productos> a = new List<Entidad.Productos>();
+
+                if (Session["s_Productos"] != null)
+                {
+                    a = (List<Entidad.Productos>)Session["s_Productos"];
+
+                }// cierra IF asignaturas tiene datos vaidos...
+                bool existe = false;
+                if (a.Count > 0)
+                    existe = ExisteProducto(int.Parse(ddlProducto.SelectedValue));
+                if (!existe)
+                {
+                    producto.Id= int.Parse(ddlProducto.SelectedValue);
+                    producto.Descripcion = ddlProducto.SelectedItem.Text;
+                    txtCantidad.Focus();
+                    
+                    producto.Existencia = 5;
+                    producto.PrecioUnitario = 10;
+                    a.Add(producto);
+                }
+                else
+                {
+                    cvDatos.IsValid = false;
+                    cvDatos.ErrorMessage = "Producto seleccionado ya esta en la lista";
+                }
+                Session["s_Productos"] = a;
+                gvFaturaDetalle.DataSource = a;
+                gvFaturaDetalle.DataBind();
+                
+
+
+            } //cierra el TRY...
+            catch (Exception err)
+            {
+                cvDatos.IsValid = false;
+                cvDatos.ErrorMessage = err.Message;
+            }
+        }
+        protected bool ExisteProducto(int codProducto)
+        {
+            bool resp = false;
+            List<Entidad.Productos> ProductoGrid = (List<Entidad.Productos>)Session["s_Productos"];
+            foreach (var item in ProductoGrid)
+            {
+                if (item.Id == codProducto)
+                {
+                    resp = true; break;
+                }
+            }
+            return resp;
+        }
+        private class DetalleFactura
+
+        {
+            public int idfacturac { get; set; }
+            public int idproductoc { get; set; }
+            public int cantidadc { get; set; }
+            public double valorc { get; set; }
+        }
     }
 }

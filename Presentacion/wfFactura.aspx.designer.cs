@@ -130,13 +130,13 @@ namespace Presentacion {
         protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
-        /// Control gvUsuarios.
+        /// Control gvFaturaDetalle.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvUsuarios;
+        protected global::System.Web.UI.WebControls.GridView gvFaturaDetalle;
         
         /// <summary>
         /// Control txtSubtotal.

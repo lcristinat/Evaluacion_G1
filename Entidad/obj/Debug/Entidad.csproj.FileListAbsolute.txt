@@ -31,6 +31,5 @@ C:\evalua\Entidad\bin\Debug\EntityFramework.xml
 C:\evalua\Entidad\bin\Debug\EntityFramework.SqlServer.xml
 C:\evalua\Entidad\bin\Debug\es\EntityFramework.resources.dll
 C:\evalua\Entidad\bin\Debug\es\EntityFramework.SqlServer.resources.dll
-C:\evalua\Entidad\obj\Debug\Entidad.csprojResolveAssemblyReference.cache
 C:\evalua\Entidad\obj\Debug\Entidad.dll
 C:\evalua\Entidad\obj\Debug\Entidad.pdb
