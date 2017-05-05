@@ -12,15 +12,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <StartPageUrl>wfProductoReporte.aspx</StartPageUrl>
-=======
-          <StartPageUrl>wfFactura.aspx</StartPageUrl>
->>>>>>> bfb342136a09d91ccdb5342b479bde55e80003bf
-=======
-          <StartPageUrl>wfProductoActualizar.aspx</StartPageUrl>
->>>>>>> 8af42be0fd176e1091892ab811e50d1e54b3e4b9
+          <StartPageUrl>wfProductoEliminar.aspx</StartPageUrl>
           <StartAction>SpecificPage</StartAction>
           <AspNetDebugging>True</AspNetDebugging>
           <SilverlightDebugging>False</SilverlightDebugging>

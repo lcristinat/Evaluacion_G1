@@ -45,24 +45,22 @@
 
                         </div>
                 </div>
-<<<<<<< HEAD
                 </div>
+
                 <div class="row">
                     
                     <div class="col-lg-3">
-=======
-
                 <div class="col-lg-3">
->>>>>>> 8af42be0fd176e1091892ab811e50d1e54b3e4b9
                     <div class="form-group">
                         
                         <asp:CustomValidator ID="cvErrores" runat="server" ErrorMessage="Ocurrió un error" Font-Bold="True" ForeColor="Red"></asp:CustomValidator>
-                        </div>
+                    </div>
                 </div>
 
 
                 </div>
-                
+                </div>
+
                            
                 <div class="col-lg-3">
                     <div class="form-group">
