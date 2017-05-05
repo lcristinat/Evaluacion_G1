@@ -20,3 +20,4 @@ D:\VSProjects\Evaluacion\Negocio\bin\Debug\Entidad.pdb
 D:\VSProjects\Evaluacion\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 D:\VSProjects\Evaluacion\Negocio\obj\Debug\Negocio.dll
 D:\VSProjects\Evaluacion\Negocio\obj\Debug\Negocio.pdb
+D:\VSProjects\Evaluacion\Negocio\bin\Debug\Negocio.dll.config

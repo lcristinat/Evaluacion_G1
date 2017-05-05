@@ -23,7 +23,7 @@ namespace Presentacion
                 Entidad.Clientes c = dc.ObtenerCliente(pIdCliente);
                 txtIdCliente.Text = c.Id.ToString();
                 txtNombre.Text = c.Nombre;
-                btnEliminar.Visible = true;
+                //btnEliminar.Visible = true;
 
             }
             catch (Exception)
@@ -36,12 +36,37 @@ namespace Presentacion
         protected void txtIdCliente_TextChanged(object sender, EventArgs e)
         {
             int idCliente;
-
-            if (txtIdCliente.Text != "")
+            try
             {
-                idCliente = int.Parse(txtIdCliente.Text);
-                ObtenerCliente(idCliente);
+                if (txtIdCliente.Text.Trim() != "")
+                {
+                    if (char.IsNumber(char.Parse(txtIdCliente.Text.Trim())))
+                    {
+                        idCliente = int.Parse(txtIdCliente.Text);
+                        ObtenerCliente(idCliente);
+                    }
+                    else
+                    {
+                        cvDatos.IsValid = false;
+                        cvDatos.ErrorMessage = "SOLO SE PERMITEN NUMEROS";
+                        txtIdCliente.Text = string.Empty;
+                        txtNombre.Text = string.Empty;
+                    }
+                }
+
+                
+                else
+                {
+                    //lblMensaje.Text = "Solo se permiten numeros";
+                }
             }
+            catch (Exception err)
+            {
+
+                cvDatos.IsValid = false;
+                cvDatos.ErrorMessage = "ERROR AL CARGAR DATOS" + err.Message;
+            }
+           
             
         }
 
@@ -57,14 +82,16 @@ namespace Presentacion
                 if (txtIdCliente.Text != "")
                 {
                     dc.EliminarCliente(c);
-                    lblMensaje.Text = "El registro ha sido eliminado";
+                    lblMensaje.Visible = true;
+                    lblMensaje.Text = "EL REGISTRO SE HA INACTIVADO";
                 }
                 
             }
-            catch (Exception)
+            catch (Exception err)
             {
 
-                throw;
+                cvDatos.IsValid = false;
+                cvDatos.ErrorMessage = "ERROR AL ELIMINAR REGISTRO" + err.Message;
             }
         }
     }
