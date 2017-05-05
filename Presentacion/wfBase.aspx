@@ -94,9 +94,9 @@
             <br />
             <div class="col-lg-4">
                 <div class="form-group">
-                    <asp:Button ID="txtEntrar" runat="server" Text="Guardar" class="btn btn-danger" />
-                    <asp:Button ID="Button1" runat="server" Text="Limpiar" class="btn btn-info" />
-                    <asp:Button ID="Button2" runat="server" Text="Cancelar" class="btn btn-default" />
+                    <asp:Button ID="btnConfirmar" runat="server" Text="Confirmar" class="btn btn-danger" />
+                    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-info" />
+                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-default" />
                 </div>
             </div>
         </div>

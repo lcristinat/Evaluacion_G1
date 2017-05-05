@@ -1,3 +1,13 @@
+C:\Users\Sistemas\Desktop\evaluacion_g1\Negocio\bin\Debug\Negocio.dll
+C:\Users\Sistemas\Desktop\evaluacion_g1\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Sistemas\Desktop\evaluacion_g1\Negocio\bin\Debug\Datos.dll
+C:\Users\Sistemas\Desktop\evaluacion_g1\Negocio\bin\Debug\Entidad.dll
+C:\Users\Sistemas\Desktop\evaluacion_g1\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\Sistemas\Desktop\evaluacion_g1\Negocio\bin\Debug\Datos.pdb
+C:\Users\Sistemas\Desktop\evaluacion_g1\Negocio\bin\Debug\Entidad.pdb
+C:\Users\Sistemas\Desktop\evaluacion_g1\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\Sistemas\Desktop\evaluacion_g1\Negocio\obj\Debug\Negocio.dll
+C:\Users\Sistemas\Desktop\evaluacion_g1\Negocio\obj\Debug\Negocio.pdb
 C:\EvaGrupo1\Sistema_Evaluacion\Negocio\bin\Debug\Negocio.dll
 C:\EvaGrupo1\Sistema_Evaluacion\Negocio\bin\Debug\Negocio.pdb
 C:\EvaGrupo1\Sistema_Evaluacion\Negocio\bin\Debug\Datos.dll
@@ -5,8 +15,6 @@ C:\EvaGrupo1\Sistema_Evaluacion\Negocio\bin\Debug\Entidad.dll
 C:\EvaGrupo1\Sistema_Evaluacion\Negocio\bin\Debug\EntityFramework.dll
 C:\EvaGrupo1\Sistema_Evaluacion\Negocio\bin\Debug\Datos.pdb
 C:\EvaGrupo1\Sistema_Evaluacion\Negocio\bin\Debug\Entidad.pdb
-C:\EvaGrupo1\Sistema_Evaluacion\Negocio\bin\Debug\EntityFramework.xml
-C:\EvaGrupo1\Sistema_Evaluacion\Negocio\bin\Debug\es\EntityFramework.resources.dll
 C:\EvaGrupo1\Sistema_Evaluacion\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 C:\EvaGrupo1\Sistema_Evaluacion\Negocio\obj\Debug\Negocio.dll
 C:\EvaGrupo1\Sistema_Evaluacion\Negocio\obj\Debug\Negocio.pdb
@@ -20,3 +28,13 @@ D:\VSProjects\Evaluacion\Negocio\bin\Debug\Entidad.pdb
 D:\VSProjects\Evaluacion\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 D:\VSProjects\Evaluacion\Negocio\obj\Debug\Negocio.dll
 D:\VSProjects\Evaluacion\Negocio\obj\Debug\Negocio.pdb
+C:\evalua\Negocio\bin\Debug\Negocio.dll
+C:\evalua\Negocio\bin\Debug\Negocio.pdb
+C:\evalua\Negocio\bin\Debug\Datos.dll
+C:\evalua\Negocio\bin\Debug\Entidad.dll
+C:\evalua\Negocio\bin\Debug\EntityFramework.dll
+C:\evalua\Negocio\bin\Debug\Datos.pdb
+C:\evalua\Negocio\bin\Debug\Entidad.pdb
+C:\evalua\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\evalua\Negocio\obj\Debug\Negocio.dll
+C:\evalua\Negocio\obj\Debug\Negocio.pdb
