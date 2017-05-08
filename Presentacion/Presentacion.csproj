@@ -213,12 +213,17 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Imagenes\uca logo.png" />
+    <Content Include="wfAgregarCliente.aspx" />
     <Content Include="wfBase.aspx" />
+    <Content Include="wfEditarCliente.aspx" />
+    <Content Include="wfEliminarCliente.aspx" />
     <Content Include="wfGrid.aspx" />
     <Content Include="wfProductoActualizar.aspx" />
     <Content Include="wfProductoEliminar.aspx" />
     <Content Include="wfProductoInsertar.aspx" />
     <Content Include="wfProductoReporte.aspx" />
+    <Content Include="wfReporteCliente.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -427,12 +432,33 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="wfAgregarCliente.aspx.cs">
+      <DependentUpon>wfAgregarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfAgregarCliente.aspx.designer.cs">
+      <DependentUpon>wfAgregarCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="wfBase.aspx.cs">
       <DependentUpon>wfBase.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="wfBase.aspx.designer.cs">
       <DependentUpon>wfBase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfEditarCliente.aspx.cs">
+      <DependentUpon>wfEditarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfEditarCliente.aspx.designer.cs">
+      <DependentUpon>wfEditarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfEliminarCliente.aspx.cs">
+      <DependentUpon>wfEliminarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfEliminarCliente.aspx.designer.cs">
+      <DependentUpon>wfEliminarCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="wfGrid.aspx.cs">
       <DependentUpon>wfGrid.aspx</DependentUpon>
@@ -469,6 +495,13 @@
     <Compile Include="wfProductoReporte.aspx.designer.cs">
       <DependentUpon>wfProductoReporte.aspx</DependentUpon>
     </Compile>
+    <Compile Include="wfReporteCliente.aspx.cs">
+      <DependentUpon>wfReporteCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfReporteCliente.aspx.designer.cs">
+      <DependentUpon>wfReporteCliente.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -489,6 +522,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="rptProducto.rdlc" />
+    <EmbeddedResource Include="Report1.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
