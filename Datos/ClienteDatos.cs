@@ -16,8 +16,18 @@ namespace Datos
         public void InsertarCliente(Entidad.Clientes c)
         {
             Entidad.BD_EvaluacionEntities dc = new Entidad.BD_EvaluacionEntities();
-            dc.Clientes.Add(c);
-            dc.SaveChanges();
+            try
+            {
+                
+                dc.Clientes.Add(c);
+                dc.SaveChanges();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
 
         }
 

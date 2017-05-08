@@ -11,6 +11,9 @@ namespace Presentacion
     {
 
         #region METODOS PRIVADOS 
+        /// <summary>
+        /// Metodo para limpiar las cajas de texto del aspx
+        /// </summary>
         protected void LimpiarFormulario(ControlCollection controles)
         {
             foreach (Control control in controles)
@@ -37,7 +40,7 @@ namespace Presentacion
         }
 
         /// <summary>
-        /// Metodo privado que busca un Cliente
+        /// Metodo para obtener el Id de un cliente
         /// </summary>
         /// <param name="pIdCliente"></param>
         protected void ObtenerCliente(int pIdCliente)
@@ -66,10 +69,7 @@ namespace Presentacion
 
         #endregion
         #region EVENTOS DE LOS OBJETOS
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         protected void btnConfirmar_Click(object sender, EventArgs e)
         {
@@ -151,8 +151,12 @@ namespace Presentacion
             LimpiarFormulario(this.Controls);
    
         }
+
         #endregion
 
-
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
+        }
     }
 }

@@ -14,6 +14,10 @@ namespace Presentacion
 
         }
 
+        /// <summary>
+        /// Metodo para obtener el Id de un cliente
+        /// </summary>
+        /// <param name="pIdCliente"></param>
         protected void ObtenerCliente(int pIdCliente)
         {
             Negocio.ClienteNegocio dc = new Negocio.ClienteNegocio();
@@ -57,7 +61,7 @@ namespace Presentacion
                 
                 else
                 {
-                    //lblMensaje.Text = "Solo se permiten numeros";
+                   
                 }
             }
             catch (Exception err)
