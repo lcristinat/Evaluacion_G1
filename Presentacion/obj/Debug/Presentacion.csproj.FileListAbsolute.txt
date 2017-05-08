@@ -196,6 +196,7 @@ D:\VSProjects\Evaluacion\Presentacion\bin\es\Microsoft.Owin.Security.MicrosoftAc
 D:\VSProjects\Evaluacion\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
 D:\VSProjects\Evaluacion\Presentacion\obj\Debug\Presentacion.dll
 D:\VSProjects\Evaluacion\Presentacion\obj\Debug\Presentacion.pdb
+C:\evalua\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
 C:\evalua\Presentacion\bin\ApplicationInsights.config
 C:\evalua\Presentacion\bin\roslyn\csc.exe
 C:\evalua\Presentacion\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -292,6 +293,5 @@ C:\evalua\Presentacion\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
 C:\evalua\Presentacion\bin\es\Microsoft.Owin.Security.Google.resources.dll
 C:\evalua\Presentacion\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
 C:\evalua\Presentacion\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-C:\evalua\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
 C:\evalua\Presentacion\obj\Debug\Presentacion.dll
 C:\evalua\Presentacion\obj\Debug\Presentacion.pdb

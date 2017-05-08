@@ -38,7 +38,7 @@
                     <div class="form-group">
                         <label class="control-label">Producto</label>
                         <asp:RequiredFieldValidator ID="rqddlproducto" runat="server" ErrorMessage="Valor Requerido" ControlToValidate="ddlProducto" ValidationGroup="vproducto"></asp:RequiredFieldValidator>
-                        <asp:DropDownList ID="ddlProducto" runat="server" class="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddlProducto_SelectedIndexChanged" >                     
+                        <asp:DropDownList ID="ddlProducto" runat="server" class="form-control"   >                     
                         </asp:DropDownList>
                                            
                           
@@ -78,7 +78,7 @@
             <%--Paginador...--%>
             <div class="col-lg-4">
                 <div class="form-group">
-                    <asp:Button ID="btnAgregar" runat="server" Text="Agregar" class="btn btn-success" ValidationGroup="vproducto" />
+                    <asp:Button ID="btnAgregar" runat="server" Text="Agregar" class="btn btn-success" ValidationGroup="vproducto" OnClick="btnAgregar_Click" />
                     <asp:Button ID="Button1" runat="server" Text="Limpiar" class="btn btn-danger" />
                     <asp:Button ID="Button2" runat="server" Text="Cancelar" class="btn btn-default" />
                 </div>
@@ -98,7 +98,7 @@
                 <asp:GridView ID="gvFaturaDetalle" runat="server"
                     AutoGenerateColumns="false"
                     CssClass="table table-bordered bs-table"
-                    DataKeyNames="Id"
+                    DataKeyNames="idProducto"
                     Width="100%"
                     PageSize="5"
                     AllowPaging="true"
@@ -164,12 +164,22 @@
                         <%--campos no editables...--%>
                         <%--<asp:BoundField DataField="IdFactura" HeaderText="Codigo Factura" InsertVisible="False" ReadOnly="True" SortExpression="Nombres" ControlStyle-Width="20%" />--%>
                         <%--ControlStyle-Width="70px"--%>
-                        <asp:BoundField DataField="Id" HeaderText="Codigo Producto" InsertVisible="False" ReadOnly="True" SortExpression="Apellidos" ControlStyle-Width="20%" />
-                        <asp:BoundField DataField="Existencia" HeaderText="Cantidad" ReadOnly="True" SortExpression="Cédula" ControlStyle-Width="10%" />
-                        <asp:BoundField DataField="PrecioUnitario" HeaderText="Valor del Producto" ReadOnly="True" SortExpression="INSS" ControlStyle-Width="10%" />
-                        
+                        <asp:BoundField DataField="idProducto" HeaderText="Codigo Producto" InsertVisible="False" ReadOnly="True" SortExpression="idProducto" ControlStyle-Width="20%" />
+                        <asp:BoundField DataField="descripcion" HeaderText="Descripcion" ReadOnly="True" ControlStyle-Width="10%" />
+                        <asp:BoundField DataField="cantidad" HeaderText="Cantidad" ReadOnly="True"  ControlStyle-Width="10%" />
+                        <asp:BoundField DataField="precioUnitario" HeaderText="Precio" ReadOnly="True"  ControlStyle-Width="10%" />
+                        <asp:BoundField DataField="importe" HeaderText="Importe" ReadOnly="True"  ControlStyle-Width="10%" />
                     </Columns>
+
+                    
                 </asp:GridView>
+                <div class="col-lg-4">
+                <div class="form-group">
+                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar Factura" class="btn btn-Success" OnClick="btnGuardar_Click" />
+                    
+                </div>
+            </div>
+                
             </div>
         </div>
     </div>

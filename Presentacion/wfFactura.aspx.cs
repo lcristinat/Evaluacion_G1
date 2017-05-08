@@ -36,6 +36,7 @@ namespace Presentacion
                 ddlProducto.DataTextField = "descripcion";
                 ddlProducto.DataValueField = "Id";
                 ddlProducto.DataBind();
+                Session.Add("s_Productos", productos);
             } //cierra IF carreras tiene datos validos...
             else
             {
@@ -185,55 +186,15 @@ namespace Presentacion
 
         protected void ddlProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-
-                Entidad.Productos producto = new Entidad.Productos();
-                List<Entidad.Productos> a = new List<Entidad.Productos>();
-
-                if (Session["s_Productos"] != null)
-                {
-                    a = (List<Entidad.Productos>)Session["s_Productos"];
-
-                }// cierra IF asignaturas tiene datos vaidos...
-                bool existe = false;
-                if (a.Count > 0)
-                    existe = ExisteProducto(int.Parse(ddlProducto.SelectedValue));
-                if (!existe)
-                {
-                    producto.Id= int.Parse(ddlProducto.SelectedValue);
-                    producto.Descripcion = ddlProducto.SelectedItem.Text;
-                    txtCantidad.Focus();
-                    
-                    producto.Existencia = 5;
-                    producto.PrecioUnitario = 10;
-                    a.Add(producto);
-                }
-                else
-                {
-                    cvDatos.IsValid = false;
-                    cvDatos.ErrorMessage = "Producto seleccionado ya esta en la lista";
-                }
-                Session["s_Productos"] = a;
-                gvFaturaDetalle.DataSource = a;
-                gvFaturaDetalle.DataBind();
-                
-
-
-            } //cierra el TRY...
-            catch (Exception err)
-            {
-                cvDatos.IsValid = false;
-                cvDatos.ErrorMessage = err.Message;
-            }
+            
         }
-        protected bool ExisteProducto(int codProducto)
+        protected bool ExisteProducto(string codProducto)
         {
             bool resp = false;
-            List<Entidad.Productos> ProductoGrid = (List<Entidad.Productos>)Session["s_Productos"];
+            List<DetalleFactura> ProductoGrid = (List<DetalleFactura>)Session["s_DetalleFactura"];
             foreach (var item in ProductoGrid)
             {
-                if (item.Id == codProducto)
+                if (item.idProducto == codProducto)
                 {
                     resp = true; break;
                 }
@@ -243,10 +204,106 @@ namespace Presentacion
         private class DetalleFactura
 
         {
-            public int idfacturac { get; set; }
-            public int idproductoc { get; set; }
-            public int cantidadc { get; set; }
-            public double valorc { get; set; }
+            public string idProducto { get; set; }
+            public string descripcion { get; set; }
+            public string cantidad { get; set; }
+            public string precioUnitario { get; set; }
+            public string importe { get; set; }
+        }
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+            double ir;
+           double neto  ;
+            ir = 0.00;
+            neto = 0.00;
+            try
+            {
+
+                DetalleFactura detallef = new DetalleFactura();
+                List<DetalleFactura> a = new List<DetalleFactura>();
+
+                if (Session["s_DetalleFactura"] != null)
+                {
+                    a = (List<DetalleFactura>)Session["s_DetalleFactura"];
+
+                }// cierra IF asignaturas tiene datos vaidos...
+                bool existe = false;
+                if (a.Count > 0)
+                    existe = ExisteProducto(ddlProducto.SelectedValue);
+                if (!existe)
+                {
+                    detallef.idProducto = ddlProducto.SelectedValue;
+                    detallef.descripcion = ddlProducto.SelectedItem.Text;
+                    detallef.cantidad = txtCantidad.Text;
+                    List<Entidad.Productos> productosBD = (List<Entidad.Productos>)Session["s_Productos"];
+                    int cantProducto = int.Parse(txtCantidad.Text.Trim());
+                    decimal precioUnitario = productosBD.Where(p => p.Id == int.Parse(detallef.idProducto)).FirstOrDefault().PrecioUnitario;
+                    decimal importeProducto = cantProducto * precioUnitario;
+                    detallef.precioUnitario = precioUnitario.ToString();
+                    detallef.importe = importeProducto.ToString();
+                    a.Add(detallef);
+                    //calculando totales de la factura....
+                    txtSubtotal.Text = (from x in a select decimal.Parse(x.importe)).Sum().ToString();
+                }
+                else
+                {
+                    cvDatos.IsValid = false;
+                    cvDatos.ErrorMessage = "Producto seleccionado ya esta en la lista";
+                }
+                Session["s_DetalleFactura"] = a;
+                ir =ir+ double.Parse(txtSubtotal.Text.ToString())*.15;
+                neto = double.Parse(txtSubtotal.Text.ToString()) + ir;
+                txtImpuesto.Text = ir.ToString();
+                txtTotal.Text = neto.ToString();
+
+                gvFaturaDetalle.DataSource = a;
+                gvFaturaDetalle.DataBind();
+
+
+
+            } //cierra el TRY...
+            catch (Exception err)
+            {
+                cvDatos.IsValid = false;
+                cvDatos.ErrorMessage = err.Message;
+            }
+        }
+
+        protected void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                Entidad.Facturas f = new Entidad.Facturas();
+                //List<Entidad.Facturas> f1 = (List<Entidad.Facturas>)Session["s_DetalleFactura"];
+                //f.Id = int.Parse(txtCliente.Text);
+                f.IdCliente = int.Parse(txtCliente.Text);
+
+                f.Fecha = DateTime.Now;
+                f.FechaProceso = DateTime.Now;
+                f.Estado = 1;
+                f.Total = decimal.Parse(txtTotal.Text);
+                f.Impuesto = decimal.Parse(txtImpuesto.Text);
+
+                Negocio.FacturaNegocio dc = new Negocio.FacturaNegocio();
+                //insertamos una factura
+                dc.Agregar(f);
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
+
+
+
+
+
+
         }
     }
 }
