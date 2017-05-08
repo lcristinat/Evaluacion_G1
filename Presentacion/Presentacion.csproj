@@ -215,14 +215,17 @@
     </Content>
     <Content Include="wfAgregarCliente.aspx" />
     <Content Include="wfBase.aspx" />
+    <Content Include="wfCambioClave.aspx" />
     <Content Include="wfEditarCliente.aspx" />
     <Content Include="wfEliminarCliente.aspx" />
     <Content Include="wfFactura.aspx" />
     <Content Include="wfGrid.aspx" />
+    <Content Include="wfLogin.aspx" />
     <Content Include="wfProductoActualizar.aspx" />
     <Content Include="wfProductoEliminar.aspx" />
     <Content Include="wfProductoInsertar.aspx" />
     <Content Include="wfProductoReporte.aspx" />
+    <Content Include="wfReporteUsuarios.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -445,6 +448,13 @@
     <Compile Include="wfBase.aspx.designer.cs">
       <DependentUpon>wfBase.aspx</DependentUpon>
     </Compile>
+    <Compile Include="wfCambioClave.aspx.cs">
+      <DependentUpon>wfCambioClave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfCambioClave.aspx.designer.cs">
+      <DependentUpon>wfCambioClave.aspx</DependentUpon>
+    </Compile>
     <Compile Include="wfEditarCliente.aspx.cs">
       <DependentUpon>wfEditarCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -473,6 +483,13 @@
     <Compile Include="wfGrid.aspx.designer.cs">
       <DependentUpon>wfGrid.aspx</DependentUpon>
     </Compile>
+    <Compile Include="wfLogin.aspx.cs">
+      <DependentUpon>wfLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfLogin.aspx.designer.cs">
+      <DependentUpon>wfLogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="wfProductoActualizar.aspx.cs">
       <DependentUpon>wfProductoActualizar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -500,6 +517,13 @@
     </Compile>
     <Compile Include="wfProductoReporte.aspx.designer.cs">
       <DependentUpon>wfProductoReporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfReporteUsuarios.aspx.cs">
+      <DependentUpon>wfReporteUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfReporteUsuarios.aspx.designer.cs">
+      <DependentUpon>wfReporteUsuarios.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

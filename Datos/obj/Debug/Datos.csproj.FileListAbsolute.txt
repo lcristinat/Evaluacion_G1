@@ -26,3 +26,10 @@ C:\evalua\Datos\bin\Debug\Entidad.pdb
 C:\evalua\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
 C:\evalua\Datos\obj\Debug\Datos.dll
 C:\evalua\Datos\obj\Debug\Datos.pdb
+C:\Git2015\evaluacionG1\Datos\bin\Debug\Datos.dll
+C:\Git2015\evaluacionG1\Datos\bin\Debug\Datos.pdb
+C:\Git2015\evaluacionG1\Datos\bin\Debug\Entidad.dll
+C:\Git2015\evaluacionG1\Datos\bin\Debug\Entidad.pdb
+C:\Git2015\evaluacionG1\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Git2015\evaluacionG1\Datos\obj\Debug\Datos.dll
+C:\Git2015\evaluacionG1\Datos\obj\Debug\Datos.pdb
