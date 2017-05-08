@@ -10,7 +10,7 @@
             </fieldset>
              <div class="col-lg-4">
                 <div class="form-group">
-                     <asp:Button ID="btnSalir" runat="server" Text="Ir a Default" />
+                     <asp:Button ID="btnSalir" runat="server" Text="Ir a Default" class="btn btn-info" OnClick="btnSalir_Click" />
                     <asp:CustomValidator ID="cvDatos" runat="server" ErrorMessage="*"></asp:CustomValidator>
                 </div>
             </div>
