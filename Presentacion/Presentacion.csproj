@@ -218,7 +218,6 @@
     <Content Include="wfBase.aspx" />
     <Content Include="wfEditarCliente.aspx" />
     <Content Include="wfEliminarCliente.aspx" />
-    <Content Include="wfFactura.aspx" />
     <Content Include="wfGrid.aspx" />
     <Content Include="wfProductoActualizar.aspx" />
     <Content Include="wfProductoEliminar.aspx" />
@@ -460,13 +459,6 @@
     </Compile>
     <Compile Include="wfEliminarCliente.aspx.designer.cs">
       <DependentUpon>wfEliminarCliente.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="wfFactura.aspx.cs">
-      <DependentUpon>wfFactura.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="wfFactura.aspx.designer.cs">
-      <DependentUpon>wfFactura.aspx</DependentUpon>
     </Compile>
     <Compile Include="wfGrid.aspx.cs">
       <DependentUpon>wfGrid.aspx</DependentUpon>
