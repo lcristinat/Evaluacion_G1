@@ -38,3 +38,13 @@ C:\evalua\Negocio\bin\Debug\Entidad.pdb
 C:\evalua\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 C:\evalua\Negocio\obj\Debug\Negocio.dll
 C:\evalua\Negocio\obj\Debug\Negocio.pdb
+C:\Git2015\evaluacionG1\Negocio\bin\Debug\Negocio.dll
+C:\Git2015\evaluacionG1\Negocio\bin\Debug\Negocio.pdb
+C:\Git2015\evaluacionG1\Negocio\bin\Debug\Datos.dll
+C:\Git2015\evaluacionG1\Negocio\bin\Debug\Entidad.dll
+C:\Git2015\evaluacionG1\Negocio\bin\Debug\EntityFramework.dll
+C:\Git2015\evaluacionG1\Negocio\bin\Debug\Datos.pdb
+C:\Git2015\evaluacionG1\Negocio\bin\Debug\Entidad.pdb
+C:\Git2015\evaluacionG1\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Git2015\evaluacionG1\Negocio\obj\Debug\Negocio.dll
+C:\Git2015\evaluacionG1\Negocio\obj\Debug\Negocio.pdb
