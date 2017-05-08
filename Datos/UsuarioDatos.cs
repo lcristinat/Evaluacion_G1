@@ -29,26 +29,26 @@ namespace Datos
             }
         }
 
-        //public Entidad.Usuarios GetUsuario(string userLogin)
-        //{
-        //    // Este método Obtiene de la base de datos un usuario meidante un pàrametro desde la capa de Negocio
+        public Entidad.Usuarios GetUsuarios(int Cod_Usua)
+        {
+            // Este método Obtiene de la base de datos un usuario meidante un pàrametro desde la capa de Negocio
 
-        //    Entidad.BD_EvaluacionEntities dc = null;
-        //    Entidad.Usuarios user = null;
-        //    try
-        //    {
+            Entidad.BD_EvaluacionEntities dc = null;
+            Entidad.Usuarios user = null;
+            try
+            {
 
-        //        dc = new Entidad.BD_EvaluacionEntities();
-        //        user = dc.Usuarios.Where(u => u.Login == userLogin).FirstOrDefault();
-        //        return user;
+                dc = new Entidad.BD_EvaluacionEntities();
+                user = dc.Usuarios.Where(u => u.Usuarios1 == Cod_Usua).FirstOrDefault();
+                return user;
 
-        //    }
-        //    catch (Exception err)
-        //    {
+            }
+            catch (Exception err)
+            {
 
-        //        throw (err);
-        //    }
-        //}
+                throw (err);
+            }
+        }
 
 
         public List<Entidad.Usuarios> GetList()

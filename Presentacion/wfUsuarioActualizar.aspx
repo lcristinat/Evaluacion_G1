@@ -50,7 +50,7 @@
             <br />
             <div class="col-lg-3">
                 <div class="form-group">
-                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success" OnClick="btnGuardar_Click" />
+                    <asp:Button ID="btnGuardar" runat="server" Text="Actualizar" class="btn btn-success" OnClick="btnGuardar_Click" />
                     <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar" class="btn btn-info" />
                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-default" />
                     <br />

@@ -10,32 +10,21 @@ namespace Negocio
 {
    public class UsuarioNegocio
     {
-        //public int BuscarUsuario(int codigo_usua)
-        //{
-        //    int respuesta = 0;
-        //    Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
-        //    Entidad.Usuarios usuario = dc.GetUsuario(login);
-        //    if (usuario != null)
-        //    {
-        //        string Clave_Encrip = CreateMD5(clave);
-
-        //        //if (usuario.clave!=clave)
-        //        if (usuario.Clave != Clave_Encrip)
-        //        {
-        //            respuesta = 1;
-        //        }
-        //        else
-        //            if (usuario.Clave == "EVALUACION")
-        //        {
-        //            respuesta = 2;
-        //        }
-        //        else
-        //        {
-        //            respuesta = 3;
-        //        }
-        //    }
-        //    return respuesta;
-        //}
+        public int BuscarUsuario(int codigo_usua)
+        {
+            int respuesta = 0;
+            Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
+            Entidad.Usuarios usuario = dc.GetUsuarios(codigo_usua);
+            if (usuario != null)
+            {
+               respuesta = 1;
+            }
+            else
+            {
+                respuesta = 0;
+            }
+            return respuesta;
+        }
         public int ConsultaUsuario(string login, string clave)
         {
             int respuesta = 0;
@@ -45,7 +34,6 @@ namespace Negocio
             {
                 string Clave_Encrip = CreateMD5(clave);
 
-                //if (usuario.clave!=clave)
                 if (usuario.Clave != Clave_Encrip)
                 {
                     respuesta = 1;
@@ -114,7 +102,6 @@ namespace Negocio
             }
 
         }
-
 
         protected static string CreateMD5(string input)
         {
