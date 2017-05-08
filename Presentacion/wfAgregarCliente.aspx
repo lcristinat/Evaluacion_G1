@@ -7,21 +7,26 @@
                 <div class="col-lg-4">
                     <div class="form-group">
                         <label class="control-label">Nombre del Cliente</label>
-                        <asp:RequiredFieldValidator ID="rvfNombre" runat="server" ForeColor="Red" ControlToValidate="txtNombre" ErrorMessage="El Nombre es requerido" Text="*" Font-Bold ="true" Font-Size="Larger"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rvfNombre" runat="server" ForeColor="Red" ControlToValidate="txtNombre" ErrorMessage="ENOMBRE ES REQUERIDO" Text="*" Font-Bold ="true" Font-Size="Larger"></asp:RequiredFieldValidator>
                         <asp:TextBox ID="txtNombre" runat="server" class="form-control" placeholder="Nombre del Cliente" Style="text-transform: uppercase" ></asp:TextBox>
-                    </div>
+        
+                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="form-group">
                         <label class="control-label">Número de Cédula</label>
-                        <asp:RequiredFieldValidator ID="rvfCedula" runat="server" ForeColor="Red" ControlToValidate="txtNumeroCedula" ErrorMessage="El Numero de Cedula es requerido" Text="*" Font-Bold ="true" Font-Size="Larger"></asp:RequiredFieldValidator>
-                        <asp:TextBox ID="txtNumeroCedula" runat="server" class="form-control" placeholder="0000000000000X" Style="text-transform: uppercase"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rvfCedula" runat="server" ForeColor="Red" ControlToValidate="txtNumeroCedula" ErrorMessage="EL NUMERO DE CEDULA ES REQUERIDO" Text="*" Font-Bold ="true" Font-Size="Larger"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="txtNumeroCedula" runat="server" class="form-control" placeholder="0000000000000X"   pattern="[A-Z]{4-14}" Style="text-transform: uppercase" MaxLength="14"></asp:TextBox>
+                      
+                        <asp:RegularExpressionValidator ID="revCedula" runat="server" Display="Dynamic" ControlToValidate="txtNumeroCedula" ErrorMessage="EL FORMATO DE CEDULA NO ES VALIDO"
+                            ForeColor="Red" ValidationExpression="^\d{13}\D{1}" Font-Bold ="true" Font-Size="Larger" Text ="*"> 
+                        </asp:RegularExpressionValidator>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="form-group">
                         <label class="control-label">Direccion</label>
-                        <asp:RequiredFieldValidator ID="rvfDireccion" runat="server" ForeColor="Red" ControlToValidate="txtDireccion" ErrorMessage="La Direccion es requerida" Text="*" Font-Bold ="true" Font-Size="Larger"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rvfDireccion" runat="server" ForeColor="Red" ControlToValidate="txtDireccion" ErrorMessage="LA DIRECCION ES REQUERIDA" Text="*" Font-Bold ="true" Font-Size="Larger"></asp:RequiredFieldValidator>
                         <asp:TextBox ID="txtDireccion" runat="server" class="form-control" placeholder="Direccion" Style="text-transform: uppercase"></asp:TextBox>
                         
                     </div>
@@ -49,4 +54,11 @@
 
         </div>
     </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
 </asp:Content>

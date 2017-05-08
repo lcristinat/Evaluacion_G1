@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="wfEditarCliente.aspx.cs" Inherits="Presentacion.wfEditarCliente" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-<div class="panel panel-default">
+    <div class="panel panel-default">
         <div class="panel-heading">Edicion de Clientes</div>
         <div class="panel-body">
             <fieldset class="form-group">
@@ -50,7 +50,7 @@
                 <div class="form-group">
                     <asp:Button ID="btnConfirmar" runat="server" Text="Confirmar" class="btn btn-success" OnClick="btnConfirmar_Click" />
                     <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar" class="btn btn-info" OnClick="btnLimpiar_Click" />
-                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-default" />
+                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-default" OnClick="btnCancelar_Click" />
                 </div>
             </div>
         </div>

@@ -38,7 +38,7 @@ namespace Presentacion
         }
 
         /// <summary>
-        /// Metodo Privado para insertar un cliente
+        /// Metodo para insertar un cliente
         /// </summary>
         protected void InsertarCliente()
         {
@@ -50,19 +50,28 @@ namespace Presentacion
                 validaCedula = dc.ValidarCedula(txtNumeroCedula.Text.Trim());
                 if (validaCedula == "1")
                 {
-                    Entidad.Clientes c = new Entidad.Clientes();
-                    c.Nombre = txtNombre.Text.ToUpper().Trim();
-                    c.Direccion = txtDireccion.Text.ToUpper().Trim();
-                    c.Cedula = txtNumeroCedula.Text.ToUpper().Trim();
+                    if (!ValidarExisteCedula(txtNumeroCedula.Text.ToUpper().Trim()))
+                    {
+                        Entidad.Clientes c = new Entidad.Clientes();
+                        c.Nombre = txtNombre.Text.ToUpper().Trim();
+                        c.Direccion = txtDireccion.Text.ToUpper().Trim();
+                        c.Cedula = txtNumeroCedula.Text.ToUpper().Trim();
 
-                    dc.InsertarCliente(c);
-                    lblMensaje.Visible = true;
-                    lblMensaje.Text = "EL REGISTRO HA SIDO GUARDADO";
+                        dc.InsertarCliente(c);
+                        lblMensaje.Visible = true;
+                        lblMensaje.Text = "EL REGISTRO HA SIDO GUARDADO";
+                    }
+                    else
+                    {
+                        cvDatos.IsValid = false;
+                        cvDatos.ErrorMessage = "EL NUMERO DE CEDULA YA EXISTE";
+                    }
+
                 }
                 else
                 {
                     cvDatos.IsValid = false;
-                    cvDatos.ErrorMessage = "EL NUMERO DE CEDULA ES INVALIDO" ;
+                    cvDatos.ErrorMessage = "WEB SERVICE: EL NUMERO DE CEDULA ES INVALIDO " ;
                 }
 
             }
@@ -72,6 +81,14 @@ namespace Presentacion
                 cvDatos.IsValid = false;
                 cvDatos.ErrorMessage = "ERROR A GUARDAR LOS DATOS" + lblMensaje.Text;
             }
+        }
+
+        protected bool ValidarExisteCedula(string cedulaCliente) //List<Entidad.Clientes> detalleClientes
+        {
+
+            Negocio.ClienteNegocio dc = new Negocio.ClienteNegocio();
+            List<Entidad.Clientes> detalleClientes = dc.ListaClientes();
+            return detalleClientes.Any(det => det.Cedula == cedulaCliente);
         }
 
         #endregion
@@ -84,7 +101,7 @@ namespace Presentacion
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Default.aspx");
         }
 
         protected void btnLimpiar_Click(object sender, EventArgs e)

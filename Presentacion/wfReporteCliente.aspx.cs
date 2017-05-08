@@ -51,9 +51,13 @@ namespace Presentacion
                 CargarReporte();
             }
         }
+
+
         #endregion
 
-
-
+        protected void btnSalir_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
+        }
     }
 }
