@@ -45,7 +45,6 @@
     <Compile Include="ClienteDatos.cs" />
     <Compile Include="FacturaDatos.cs" />
     <Compile Include="FacturaDetalleDatos.cs" />
-    <Compile Include="ProductoDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
