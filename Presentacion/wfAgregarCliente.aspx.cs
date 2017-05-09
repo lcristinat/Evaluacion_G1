@@ -79,7 +79,7 @@ namespace Presentacion
             {
 
                 cvDatos.IsValid = false;
-                cvDatos.ErrorMessage = "ERROR A GUARDAR LOS DATOS" + lblMensaje.Text;
+                cvDatos.ErrorMessage = "ERROR A GUARDAR LOS DATOS" + lblMensaje.Text+err;
             }
         }
 

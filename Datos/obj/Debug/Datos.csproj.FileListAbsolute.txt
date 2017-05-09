@@ -19,3 +19,20 @@ D:\VSProjects\Evaluacion\Datos\bin\Debug\Entidad.pdb
 D:\VSProjects\Evaluacion\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
 D:\VSProjects\Evaluacion\Datos\obj\Debug\Datos.dll
 D:\VSProjects\Evaluacion\Datos\obj\Debug\Datos.pdb
+<<<<<<< HEAD
+=======
+C:\evalua\Datos\bin\Debug\Datos.dll
+C:\evalua\Datos\bin\Debug\Datos.pdb
+C:\evalua\Datos\bin\Debug\Entidad.dll
+C:\evalua\Datos\bin\Debug\Entidad.pdb
+C:\evalua\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\evalua\Datos\obj\Debug\Datos.dll
+C:\evalua\Datos\obj\Debug\Datos.pdb
+C:\Git2015\evaluacionG1\Datos\bin\Debug\Datos.dll
+C:\Git2015\evaluacionG1\Datos\bin\Debug\Datos.pdb
+C:\Git2015\evaluacionG1\Datos\bin\Debug\Entidad.dll
+C:\Git2015\evaluacionG1\Datos\bin\Debug\Entidad.pdb
+C:\Git2015\evaluacionG1\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Git2015\evaluacionG1\Datos\obj\Debug\Datos.dll
+C:\Git2015\evaluacionG1\Datos\obj\Debug\Datos.pdb
+>>>>>>> 3b446beed9d607d8e6c08164be6e9fab9258b5e0
