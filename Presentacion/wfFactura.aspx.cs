@@ -184,10 +184,7 @@ namespace Presentacion
             
         }
 
-        protected void ddlProducto_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
+      
         protected bool ExisteProducto(string codProducto)
         {
             bool resp = false;
@@ -201,6 +198,7 @@ namespace Presentacion
             }
             return resp;
         }
+        //Creamos una Clase Temporal con los mismo atributos de la Tabla Producto
         private class DetalleFactura
 
         {
@@ -272,30 +270,63 @@ namespace Presentacion
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
+           
             try
             {
 
+               
+                
                 Entidad.Facturas f = new Entidad.Facturas();
-                //List<Entidad.Facturas> f1 = (List<Entidad.Facturas>)Session["s_DetalleFactura"];
-                //f.Id = int.Parse(txtCliente.Text);
+                List<Entidad.Factura_Detalle> fd1 = new List<Entidad.Factura_Detalle>();
+               
+                //Asignamos los Valores recibos por pantalla
                 f.IdCliente = int.Parse(txtCliente.Text);
-
                 f.Fecha = DateTime.Now;
                 f.FechaProceso = DateTime.Now;
                 f.Estado = 1;
                 f.Total = decimal.Parse(txtTotal.Text);
                 f.Impuesto = decimal.Parse(txtImpuesto.Text);
 
+                //Instancias a dc lo que tiene la Capa Negocio de Factutra
                 Negocio.FacturaNegocio dc = new Negocio.FacturaNegocio();
+
+                //creamos una variable con los valores de la clase de Producto creada Temporalmente
+                List<DetalleFactura> productoFactura = (List<DetalleFactura>)Session["s_DetalleFactura"];
+                
+                //llenamos la entidad  Factura detalle con lo que contiene la Session "s_DetalleFactura
+                foreach (DetalleFactura item in productoFactura)
+                {
+                    Entidad.Factura_Detalle fd = new Entidad.Factura_Detalle();
+                    fd.IdProducto = int.Parse(item.idProducto);
+                    fd.Valor = decimal.Parse(item.importe);
+                    fd.Cantidad = int.Parse(item.cantidad);
+                    fd.Valor = decimal.Parse(item.importe);
+                    fd.FechaProceso = DateTime.Now;
+
+                    fd1.Add(fd);
+                    
+                }
+
+
+               if (dc.NuevaFactura(f, fd1))
+                {
+                    
+                    cvDatos.IsValid = false;
+                    cvDatos.ErrorMessage = "FACTURA GUARDADA EXITOSAMENTE EN LA BD";
+                   //Eliminamos la session
+                    Session.Remove("s_DetalleFactura");
+
+                }
+
                 //insertamos una factura
-                dc.Agregar(f);
+
 
 
             }
-            catch (Exception)
+            catch (Exception err )
             {
-
-                throw;
+                cvDatos.IsValid = false;
+                cvDatos.ErrorMessage = "Ocurrio un error al guardar la informacion en la BD..." + err.Message;
             }
            
 
@@ -305,5 +336,20 @@ namespace Presentacion
 
 
         }
+
+        protected void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            //Aqui limpiamos todos los objetos contenidos en el Formulario
+            txtCliente.Text = "";
+            txtNombre.Text = "";
+            txtCantidad.Text = "";
+            Session.Remove("s_DetalleFactura");
+            gvFaturaDetalle.DataSource = null;
+            gvFaturaDetalle.DataBind();
+            CargarProducto();
+
+        }
+
+      
     }
 }

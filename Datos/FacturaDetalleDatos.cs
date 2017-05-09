@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 
 namespace Datos
 {
@@ -15,8 +15,7 @@ namespace Datos
             {
                 dc = new Entidad.BD_EvaluacionEntities();
                 dc.Factura_Detalle.Add(aa);
-                dc.SaveChanges();
-            }
+                    dc.SaveChanges();            }
             catch (Exception err)
             {
 

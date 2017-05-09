@@ -8,14 +8,14 @@ namespace Datos
 {
     public class FacturaDatos
     {
-        public Entidad.Facturas GetFactura(int idcliente)
+        public Entidad.Facturas GetFactura(int idfactura)
         {
             Entidad.BD_EvaluacionEntities dc = null;
             Entidad.Facturas Factura = null;
             try
             {
                 dc = new Entidad.BD_EvaluacionEntities();
-                Factura = dc.Facturas.Where(u => u.IdCliente== idcliente).FirstOrDefault();
+                Factura = dc.Facturas.Where(u => u.Id== idfactura).FirstOrDefault();
                 return Factura;
             }
             catch (Exception err)

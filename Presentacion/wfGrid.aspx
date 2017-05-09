@@ -64,7 +64,7 @@
                             <ItemTemplate>
                                 <asp:LinkButton ID="lkbEliminar" Text="ELIMINAR" CommandName="ELIMINAR" CommandArgument='<%# Eval("C_Usuario") %>'
                                     OnClientClick='if(!confirm("¿ESTA SEGURO QUE DESEA ELIMINAR EL REGISTRO?"))return false'
-                                    runat="server" CssClass="btn btn-danger btn-sm" ToolTip="ELIMINAR"><span class="glyphicon glyphicon glyphicon-trash"></span></asp:LinkButton>
+                                    runat="server" CssClass="btn btn-danger btn-sm" Visible="true" ToolTip="ELIMINAR"><span class="glyphicon glyphicon glyphicon-trash" ></span></asp:LinkButton>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField>

@@ -38,7 +38,7 @@
                     <div class="form-group">
                         <label class="control-label">Producto</label>
                         <asp:RequiredFieldValidator ID="rqddlproducto" runat="server" ErrorMessage="Valor Requerido" ControlToValidate="ddlProducto" ValidationGroup="vproducto"></asp:RequiredFieldValidator>
-                        <asp:DropDownList ID="ddlProducto" runat="server" class="form-control"   >                     
+                        <asp:DropDownList ID="ddlProducto" runat="server" class="form-control" AutoPostBack="true" AppendDataBoundItems="true"   >                     
                         </asp:DropDownList>
                                            
                           
@@ -50,6 +50,9 @@
                         <label class="control-label">Cantidad</label>
                         <asp:RequiredFieldValidator ID="rfvcantidad" runat="server" ErrorMessage="Dato Requerido" ForeColor="Red" Text="*" ControlToValidate="txtCantidad" ValidationGroup="vproducto" ></asp:RequiredFieldValidator>
                         <asp:TextBox ID="txtCantidad" runat="server" class="form-control" placeholder="Cantidad" ></asp:TextBox> 
+                        <asp:RegularExpressionValidator ID="revCantidad" runat="server" ErrorMessage="Solo Número mayores a Cero" ControlToValidate="txtCantidad" ValidationExpression="[0-9]*" ValidationGroup="vproducto"></asp:RegularExpressionValidator>
+                   <%-- <asp:ValidationSummary ID="ValidationSummary1"  runat="server" ForeColor="Red" />--%>
+                         <asp:CustomValidator ID="cvDatos" runat="server" ErrorMessage="*" ForeColor="Red"></asp:CustomValidator>
 
                     </div>
                         
@@ -57,15 +60,15 @@
                </fieldset>
          
 
-             <fieldset class="form-group">
+         <%--    <fieldset class="form-group">
               <div class="col-lg-3">
                     <div class="form-group">
-                       <asp:CustomValidator ID="cvDatos" runat="server" ErrorMessage="*" ForeColor="Red"></asp:CustomValidator>
+                       <%--<asp:CustomValidator ID="cvDatos" runat="server" ErrorMessage="*" ForeColor="Red"></asp:CustomValidator>--%>
                        
                     </div>
                 </div>
-            </fieldset>
-                  <fieldset class="form-group">
+         <%--   </fieldset>--%>
+      <%--            <fieldset class="form-group">
               <div class="col-lg-3">
                     <div class="form-group">
                                        
@@ -73,14 +76,13 @@
                                              
                     </div>
                 </div>
-            </fieldset>
+            </fieldset>--%>
 
             <%--Paginador...--%>
             <div class="col-lg-4">
                 <div class="form-group">
                     <asp:Button ID="btnAgregar" runat="server" Text="Agregar" class="btn btn-success" ValidationGroup="vproducto" OnClick="btnAgregar_Click" />
-                    <asp:Button ID="Button1" runat="server" Text="Limpiar" class="btn btn-danger" />
-                    <asp:Button ID="Button2" runat="server" Text="Cancelar" class="btn btn-default" />
+                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar" class="btn btn-danger" OnClick="btnLimpiar_Click" />
                 </div>
             </div>
                 
