@@ -106,14 +106,30 @@ namespace Datos
 
         public void update(Entidad.Usuarios a)
         {
-            Entidad.BD_EvaluacionEntities dc = new Entidad.BD_EvaluacionEntities();
-            dc = new Entidad.BD_EvaluacionEntities();
-            Entidad.Usuarios usuarioBD = dc.Usuarios.Where(aBD => aBD.Usuarios1 == a.Usuarios1).FirstOrDefault();
-            usuarioBD.Nombre = a.Nombre;
-            usuarioBD.Login = a.Login;
-            usuarioBD.Clave = a.Clave;
-            usuarioBD.Cedula = a.Cedula;
-            dc.SaveChanges();
+            Entidad.Usuarios usr = null;
+            Entidad.BD_EvaluacionEntities dc = null;
+            try
+            {
+                dc = new Entidad.BD_EvaluacionEntities();
+                dc = new Entidad.BD_EvaluacionEntities();
+                usr = dc.Usuarios.Where(c => c.Usuarios1 == a.Usuarios1).FirstOrDefault();
+                usr.Nombre = a.Nombre;
+                usr.Login = a.Login;
+                usr.Clave = a.Clave;
+                usr.Cedula = a.Cedula;
+                dc.SaveChanges();
+            }
+            catch (Exception err)
+            {
+
+                throw new Exception("Error al ejecutar update en Usuarios////Detalle: " + err.Message);
+            }
+            finally
+            {
+                if (dc != null)
+                    dc.Dispose();
+            }
+
 
         }
     }
