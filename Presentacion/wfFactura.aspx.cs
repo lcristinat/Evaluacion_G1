@@ -227,6 +227,7 @@ namespace Presentacion
 
                 }// cierra IF asignaturas tiene datos vaidos...
                 bool existe = false;
+                int hayproducto = 0;
                 if (a.Count > 0)
                     existe = ExisteProducto(ddlProducto.SelectedValue);
                 if (!existe)
@@ -236,13 +237,23 @@ namespace Presentacion
                     detallef.cantidad = txtCantidad.Text;
                     List<Entidad.Productos> productosBD = (List<Entidad.Productos>)Session["s_Productos"];
                     int cantProducto = int.Parse(txtCantidad.Text.Trim());
-                    decimal precioUnitario = productosBD.Where(p => p.Id == int.Parse(detallef.idProducto)).FirstOrDefault().PrecioUnitario;
-                    decimal importeProducto = cantProducto * precioUnitario;
-                    detallef.precioUnitario = precioUnitario.ToString();
-                    detallef.importe = importeProducto.ToString();
-                    a.Add(detallef);
-                    //calculando totales de la factura....
-                    txtSubtotal.Text = (from x in a select decimal.Parse(x.importe)).Sum().ToString();
+                    hayproducto = productosBD.Where(p => p.Id == int.Parse(detallef.idProducto)).FirstOrDefault().Existencia;
+                    if (int.Parse(detallef.cantidad) > hayproducto)
+                    {
+                        cvDatos.IsValid = false;
+                        cvDatos.ErrorMessage = "De este producto solo hay en exitencia "+" " + hayproducto;
+                    } 
+                    else
+                    {
+                        decimal precioUnitario = productosBD.Where(p => p.Id == int.Parse(detallef.idProducto)).FirstOrDefault().PrecioUnitario;
+                        decimal importeProducto = cantProducto * precioUnitario;
+                        detallef.precioUnitario = precioUnitario.ToString();
+                        detallef.importe = importeProducto.ToString();
+                        a.Add(detallef);
+                        //calculando totales de la factura....
+                        txtSubtotal.Text = (from x in a select decimal.Parse(x.importe)).Sum().ToString();
+                    }
+               
                 }
                 else
                 {

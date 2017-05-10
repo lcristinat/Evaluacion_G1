@@ -21,5 +21,32 @@ namespace Negocio
                 throw (err);
             }
         }
+        public int ConsultarExistencia(int idproducto )
+        {
+            try
+            {
+                int existencia = 0;
+                Datos.ProductoDatos dc = new Datos.ProductoDatos();
+                existencia= dc.ObtenerProducto(idproducto);
+                return existencia;
+            }
+            catch (Exception err)
+            {
+
+                throw (err);
+            }
+        }
+        //protected int ExisteProucto(int NA)
+        //{
+        //    int respuesta = 0;
+        //    Datos.ProductoDatos dc = new Datos.ProductoDatos();
+        //    Entidad.Productos producto = dc.ObtenerProducto (NA);
+        //    if (producto != null)
+        //    {
+        //        respuesta = 1;
+        //    }
+
+        //    return respuesta;
+        //}
     }
 }
