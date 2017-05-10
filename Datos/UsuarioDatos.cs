@@ -114,8 +114,8 @@ namespace Datos
                 dc = new Entidad.BD_EvaluacionEntities();
                 usr = dc.Usuarios.Where(c => c.Usuarios1 == a.Usuarios1).FirstOrDefault();
                 usr.Nombre = a.Nombre;
-                usr.Login = a.Login;
-                usr.Clave = a.Clave;
+               // usr.Login = a.Login;
+               // usr.Clave = a.Clave;
                 usr.Cedula = a.Cedula;
                 dc.SaveChanges();
             }

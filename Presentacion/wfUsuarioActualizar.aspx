@@ -9,24 +9,21 @@
                     <div class="form-group">
                         <label class="control-label">Còdigo de Usuario</label>
                         <asp:TextBox ID="txtCodigo" runat="server" class="form-control" placeholder="Còdigo de Usuario" ></asp:TextBox>
-                        <br />
                         <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-success" OnClick="btnBuscar_Click" />
-                        <br />
-                        <asp:RequiredFieldValidator ID="rvCodigo" runat="server" ErrorMessage="Còdigo es requerido" ForeColor="Red" ControlToValidate="txtCodigo">*</asp:RequiredFieldValidator>
                     </div>
                 </div>   
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label class="control-label">Nombre</label>
                         <asp:TextBox ID="txtNombre" runat="server" class="form-control" placeholder="Nombres y Apellidos de Usuario"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rvNombre" runat="server" ErrorMessage="Nombre es requerido" ForeColor="Red" ControlToValidate="txtNombre">*</asp:RequiredFieldValidator>
+                        <%--<asp:RequiredFieldValidator ID="rvNombre" runat="server" ErrorMessage="Nombre es requerido" ForeColor="Red" ControlToValidate="txtNombre">*</asp:RequiredFieldValidator>--%>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group">
                         <label class="control-label">Número de Cédula</label>
                         <asp:TextBox ID="txtNumeroCedula" runat="server" class="form-control" placeholder="000-000000-0000X" ></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rvCedula" runat="server" ControlToValidate="txtNumeroCedula" ErrorMessage="Cèdula es Requerida" ForeColor="Red">*</asp:RequiredFieldValidator>
+                        <%--<asp:RequiredFieldValidator ID="rvCedula" runat="server" ControlToValidate="txtNumeroCedula" ErrorMessage="Cèdula es Requerida" ForeColor="Red">*</asp:RequiredFieldValidator>--%>
                      </div>
                 </div>
             </fieldset>
@@ -36,7 +33,7 @@
                     <div class="form-group">
                         <label class="control-label">Login</label>
                         <asp:TextBox ID="txtLogin" runat="server" class="form-control" placeholder="Login" ></asp:TextBox>
-                         <asp:RequiredFieldValidator ID="rvLogin" runat="server" ControlToValidate="txtLogin" ErrorMessage="Login es requerido" ForeColor="Red">*</asp:RequiredFieldValidator>
+                         <%--<asp:RequiredFieldValidator ID="rvLogin" runat="server" ControlToValidate="txtLogin" ErrorMessage="Login es requerido" ForeColor="Red">*</asp:RequiredFieldValidator>--%>
                     </div>
                 </div>
                  
@@ -44,7 +41,7 @@
                     <div class="form-group">
                         <label class="control-label">Clave</label>
                         <asp:TextBox ID="txtClave" runat="server" class="form-control" TextMode="Password" placeholder="Clave" ></asp:TextBox>
-                         <asp:RequiredFieldValidator ID="rvClave" runat="server" ControlToValidate="txtClave" ErrorMessage="Clave es requerida" ForeColor="Red">*</asp:RequiredFieldValidator>
+                         <%--<asp:RequiredFieldValidator ID="rvClave" runat="server" ControlToValidate="txtClave" ErrorMessage="Clave es requerida" ForeColor="Red">*</asp:RequiredFieldValidator>--%>
                     </div>
                 </div>
                
