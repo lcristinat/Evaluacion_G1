@@ -237,6 +237,8 @@ namespace Presentacion
                     detallef.cantidad = txtCantidad.Text;
                     List<Entidad.Productos> productosBD = (List<Entidad.Productos>)Session["s_Productos"];
                     int cantProducto = int.Parse(txtCantidad.Text.Trim());
+                    //se recupera de la tabla producto la existencia del proucto seleccionado en drowndownlist
+                    //si el valor digitado es mayor que lo que existe
                     hayproducto = productosBD.Where(p => p.Id == int.Parse(detallef.idProducto)).FirstOrDefault().Existencia;
                     if (int.Parse(detallef.cantidad) > hayproducto)
                     {
