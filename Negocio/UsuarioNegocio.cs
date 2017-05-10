@@ -10,20 +10,19 @@ namespace Negocio
 {
    public class UsuarioNegocio
     {
-        public int BuscarUsuario(int codigo_usua)
+        public Entidad.Usuarios ObtenerUsuario(int codigo_usua)
         {
-            int respuesta = 0;
+       
             Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
-            Entidad.Usuarios usuario = dc.GetUsuarios(codigo_usua);
-            if (usuario != null)
+            try
             {
-               respuesta = 1;
+              return dc.GetList().Where(a => a.Usuarios1 == codigo_usua).FirstOrDefault();
             }
-            else
+            catch (Exception err)
             {
-                respuesta = 0;
+
+                throw err;
             }
-            return respuesta;
         }
         public int ConsultaUsuario(string login, string clave)
         {
@@ -56,6 +55,20 @@ namespace Negocio
             {
                 Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
                 dc.Delete_Usuarios(idUsuario);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public void ActualizarUsuario(Entidad.Usuarios idUsuario)
+        {
+            try
+            {
+                Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
+                dc.update(idUsuario);
             }
             catch (Exception)
             {
@@ -117,6 +130,30 @@ namespace Negocio
                 sb.Append(hashBytes[i].ToString("x2"));
             }
             return sb.ToString();
+        }
+        public string ValidarCedula(string numeroCedula)
+        {
+            string respuesta = "";
+            ServiciosUCA.ServiciosUcaClient ws = new ServiciosUCA.ServiciosUcaClient();
+
+            try
+            {
+                string resp = ws.ValidarCedula(numeroCedula);
+                if (resp == "1")
+                {
+                    respuesta = "1";
+                }
+                else
+                {
+                    respuesta = "2";
+                }
+            }
+            catch (Exception err)
+            {
+                throw (err);
+            }
+
+            return respuesta;
         }
 
     }

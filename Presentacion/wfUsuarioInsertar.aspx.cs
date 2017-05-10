@@ -35,14 +35,15 @@ namespace Presentacion
                 {
                     Negocio.UsuarioNegocio dc = new Negocio.UsuarioNegocio();
                     Entidad.Usuarios u = new Entidad.Usuarios();
-                    u.Nombre = txtNombre.Text.Trim();
-                    u.Login = txtLogin.Text.Trim();
+                    u.Nombre = txtNombre.Text.Trim().ToUpper();
+                    u.Login = txtLogin.Text.Trim().ToUpper();
                     u.Clave = txtClave.Text.Trim();
-                    u.Cedula = cadena_cedula;
+                    u.Cedula = cadena_cedula.ToUpper();
                     u.FechaProceso = DateTime.Now;
                     u.Estado = 1;
                     dc.Agregar(u);
                     lblMensaje.Text = "Usuario Creado con Éxito";
+                    Limpiar();
                 }
                 else
                 {
@@ -56,6 +57,7 @@ namespace Presentacion
                 CV_Datos.ErrorMessage = "Error al registrar los datos" + err;
             }
         }
-           
+
+      
     }
 }

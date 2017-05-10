@@ -8,7 +8,10 @@
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label class="control-label">Còdigo de Usuario</label>
-                        <asp:TextBox ID="txtCodigo" runat="server" class="form-control" placeholder="Còdigo de Usuario"></asp:TextBox>
+                        <asp:TextBox ID="txtCodigo" runat="server" class="form-control" placeholder="Còdigo de Usuario" ></asp:TextBox>
+                        <br />
+                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-success" OnClick="btnBuscar_Click" />
+                        <br />
                         <asp:RequiredFieldValidator ID="rvCodigo" runat="server" ErrorMessage="Còdigo es requerido" ForeColor="Red" ControlToValidate="txtCodigo">*</asp:RequiredFieldValidator>
                     </div>
                 </div>   
@@ -51,8 +54,7 @@
             <div class="col-lg-3">
                 <div class="form-group">
                     <asp:Button ID="btnGuardar" runat="server" Text="Actualizar" class="btn btn-success" OnClick="btnGuardar_Click" />
-                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar" class="btn btn-info" />
-                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-default" />
+                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-default" OnClick="btnCancelar_Click" />
                     <br />
                     <asp:Label ID="lblMensaje" runat="server" Font-Size="Smaller" ForeColor="Red"></asp:Label>
                     <asp:CustomValidator ID="CV_Datos" runat="server" ErrorMessage="CustomValidator" ForeColor="Blue">*</asp:CustomValidator>

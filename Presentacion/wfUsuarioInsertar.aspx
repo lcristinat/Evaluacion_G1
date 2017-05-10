@@ -46,8 +46,7 @@
             <div class="col-lg-3">
                 <div class="form-group">
                     <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success" OnClick="btnGuardar_Click" />
-                    <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar" class="btn btn-info" />
-                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-default" />
+                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-default" OnClick="btnCancelar_Click" />
                     <br />
                     <asp:Label ID="lblMensaje" runat="server" Font-Size="Smaller" ForeColor="Red"></asp:Label>
                     <asp:CustomValidator ID="CV_Datos" runat="server" ErrorMessage="CustomValidator" ForeColor="Blue">*</asp:CustomValidator>
