@@ -16,7 +16,7 @@ namespace Negocio
             Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
             try
             {
-              return dc.GetList().Where(a => a.Usuarios1 == codigo_usua).FirstOrDefault();
+              return dc.GetList().Where(a => a.Usuarios1 == codigo_usua && a.Estado<3).FirstOrDefault();
             }
             catch (Exception err)
             {
@@ -49,12 +49,27 @@ namespace Negocio
             }
             return respuesta;
         }
-        public void EliminarUsuario(int idUsuario)
+
+        public Entidad.Usuarios ObtenerCedula(String Codigo_Cedula)
+        {
+           
+            Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
+            try
+            {
+                return dc.GetList().Where(a => a.Cedula == Codigo_Cedula && a.Estado < 3).FirstOrDefault();
+            }
+            catch (Exception err)
+            {
+
+                throw err;
+            }
+        }
+        public void EliminarUsuario(Entidad.Usuarios idUsuario)
         {
             try
             {
                 Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
-                dc.Delete_Usuarios(idUsuario);
+                dc.Delete(idUsuario);
             }
             catch (Exception)
             {

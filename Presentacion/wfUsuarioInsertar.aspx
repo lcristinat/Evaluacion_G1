@@ -8,14 +8,14 @@
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label class="control-label">Nombre</label>
-                        <asp:TextBox ID="txtNombre" runat="server" class="form-control" placeholder="Nombres y Apellidos de Usuario"></asp:TextBox>
+                        <asp:TextBox ID="txtNombre" runat="server" class="form-control" placeholder="Nombres y Apellidos de Usuario"  Style="text-transform: uppercase" ></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Nombre es requerido" ForeColor="Red" ControlToValidate="txtNombre">*</asp:RequiredFieldValidator>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group">
                         <label class="control-label">Número de Cédula</label>
-                        <asp:TextBox ID="txtNumeroCedula" runat="server" class="form-control" placeholder="000-000000-0000X" ></asp:TextBox>
+                        <asp:TextBox ID="txtNumeroCedula" runat="server" class="form-control" placeholder="000-000000-0000X"  Style="text-transform: uppercase" ></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rvCedula" runat="server" ControlToValidate="txtNumeroCedula" ErrorMessage="Cèdula es Requerida" ForeColor="Red">*</asp:RequiredFieldValidator>
                      </div>
                 </div>
@@ -25,7 +25,7 @@
                 <div class="col-lg-3">
                     <div class="form-group">
                         <label class="control-label">Login</label>
-                        <asp:TextBox ID="txtLogin" runat="server" class="form-control" placeholder="Login" ></asp:TextBox>
+                        <asp:TextBox ID="txtLogin" runat="server" class="form-control" placeholder="Login"  Style="text-transform: uppercase" ></asp:TextBox>
                          <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtLogin" ErrorMessage="Login es requerido" ForeColor="Red">*</asp:RequiredFieldValidator>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
             <div class="col-lg-3">
                 <div class="form-group">
                     <asp:Button ID="btnGuardar" runat="server" Text="Guardar" class="btn btn-success" OnClick="btnGuardar_Click" />
-                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-default" OnClick="btnCancelar_Click" />
+                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-default" OnClick="btnCancelar_Click"  />
                     <br />
                     <asp:Label ID="lblMensaje" runat="server" Font-Size="Smaller" ForeColor="Red"></asp:Label>
                     <asp:CustomValidator ID="CV_Datos" runat="server" ErrorMessage="CustomValidator" ForeColor="Blue">*</asp:CustomValidator>

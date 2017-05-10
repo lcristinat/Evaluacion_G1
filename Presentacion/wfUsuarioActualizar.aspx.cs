@@ -13,7 +13,28 @@ namespace Presentacion
         {
 
         }
-
+        protected void Limpiar_Controles(ControlCollection controles)
+        {
+            foreach (Control control in controles)
+            {
+                if (control is TextBox)
+                    ((TextBox)control).Text = string.Empty;
+                else if (control is DropDownList)
+                    ((DropDownList)control).ClearSelection();
+                else if (control is RadioButtonList)
+                    ((RadioButtonList)control).ClearSelection();
+                else if (control is CheckBoxList)
+                    ((CheckBoxList)control).ClearSelection();
+                else if (control is RadioButton)
+                    ((RadioButton)control).Checked = false;
+                else if (control is CheckBox)
+                    ((CheckBox)control).Checked = false;
+                else if (control.HasControls())
+                    //Esta linea detécta un Control que contenga otros Controles
+                    //Así ningún control se quedará sin ser limpiado.
+                    Limpiar_Controles(control.Controls);
+            }
+        }
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
             Negocio.UsuarioNegocio dc = new Negocio.UsuarioNegocio();
@@ -35,7 +56,7 @@ namespace Presentacion
                     lblMensaje.Visible = true;
                     lblMensaje.Text = "Registro Actualizado Correctamente";
                     txtCodigo.ReadOnly = false;
-
+                    Limpiar_Controles(this.Controls);
                 }
                 else
                 {
@@ -76,11 +97,11 @@ namespace Presentacion
                     txtClave.Text = c.Clave;
                     txtCodigo.ReadOnly = true;
                     btnGuardar.Enabled = true;
+                    Limpiar_Controles(this.Controls);
                 }
             }
             catch (Exception err)
             {
-
                 CV_Datos.IsValid = false;
                 CV_Datos.ErrorMessage = "ERROR al Consultar el registro" + err.Message;
             }

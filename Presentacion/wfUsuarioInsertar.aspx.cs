@@ -13,14 +13,34 @@ namespace Presentacion
         {
 
         }
-        protected void Limpiar()
+        protected void Limpiar_Controles(ControlCollection controles)
         {
-            txtNombre.Text = "";
-            txtNumeroCedula.Text = "";
-            txtLogin.Text = "";
-            txtClave.Text = "";
+            foreach (Control control in controles)
+            {
+                if (control is TextBox)
+                    ((TextBox)control).Text = string.Empty;
+                else if (control is DropDownList)
+                    ((DropDownList)control).ClearSelection();
+                else if (control is RadioButtonList)
+                    ((RadioButtonList)control).ClearSelection();
+                else if (control is CheckBoxList)
+                    ((CheckBoxList)control).ClearSelection();
+                else if (control is RadioButton)
+                    ((RadioButton)control).Checked = false;
+                else if (control is CheckBox)
+                    ((CheckBox)control).Checked = false;
+                else if (control.HasControls())
+                    //Esta linea detécta un Control que contenga otros Controles
+                    //Así ningún control se quedará sin ser limpiado.
+                    Limpiar_Controles(control.Controls);
+             }
         }
-
+        protected bool  ValidarCedula(string CodCedula)
+        {
+            Negocio.UsuarioNegocio dc = new Negocio.UsuarioNegocio();
+            List<Entidad.Usuarios> ced = dc.ListaUsuario();
+            return ced.Any(a => a.Cedula == CodCedula);
+        }
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
             try
@@ -34,16 +54,29 @@ namespace Presentacion
                 if (NCedula == "1")
                 {
                     Negocio.UsuarioNegocio dc = new Negocio.UsuarioNegocio();
-                    Entidad.Usuarios u = new Entidad.Usuarios();
-                    u.Nombre = txtNombre.Text.Trim().ToUpper();
-                    u.Login = txtLogin.Text.Trim().ToUpper();
-                    u.Clave = txtClave.Text.Trim();
-                    u.Cedula = cadena_cedula.ToUpper();
-                    u.FechaProceso = DateTime.Now;
-                    u.Estado = 1;
-                    dc.Agregar(u);
-                    lblMensaje.Text = "Usuario Creado con Éxito";
-                    Limpiar();
+                    Entidad.Usuarios c = dc.ObtenerCedula(cadena_cedula);
+                    if (!ValidarCedula(cadena_cedula))
+                    {
+                      
+                        Entidad.Usuarios u = new Entidad.Usuarios();
+                        u.Nombre = txtNombre.Text.Trim().ToUpper();
+                        u.Login = txtLogin.Text.Trim().ToUpper();
+                        u.Clave = txtClave.Text.Trim();
+                        u.Cedula = cadena_cedula.ToUpper();
+                        u.FechaProceso = DateTime.Now;
+                        u.Estado = 1;
+                        dc.Agregar(u);
+                        lblMensaje.Text = "Usuario Creado con Éxito";
+                        Limpiar_Controles(this.Controls);
+                        
+                    }
+                    else
+                    {
+                        lblMensaje.Text = "Usuarios no pueden crearse con un mismo nùmero de cèdula, operaciòn cancelada";
+                        Limpiar_Controles(this.Controls);
+                        btnGuardar.Enabled = false;
+                    }
+                   
                 }
                 else
                 {
@@ -58,6 +91,9 @@ namespace Presentacion
             }
         }
 
-      
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
+        }
     }
 }
