@@ -6,24 +6,33 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-   public class UsuarioDatos
+
+   
+        
+    public class UsuarioDatos
     {
-        public Entidad.Usuarios GetUsuario(string userLogin)
+        public void Update(Entidad.Usuarios a)
         {
-            // Este método Obtiene de la base de datos un usuario meidante un pàrametro desde la capa de Negocio
-           
+            Entidad.Usuarios usr = null;
             Entidad.BD_EvaluacionEntities dc = null;
-            Entidad.Usuarios user = null;
             try
             {
-
                 dc = new Entidad.BD_EvaluacionEntities();
-                user =dc.Usuarios.Where(u => u.Login == userLogin).FirstOrDefault();
-                return user;
+                usr = dc.Usuarios.Where(c => c.Usuarios1 == a.Usuarios1).FirstOrDefault();
+                if (usr != null)
+                {
+                    usr.Login = a.Login;
+                    usr.Nombre = a.Nombre;
+                    usr.Clave = a.Clave;
+                    usr.FechaProceso = a.FechaProceso;
+                    usr.Cedula = a.Cedula;
+                    dc.SaveChanges();
+                }
 
             }
             catch (Exception err)
             {
+
 
                 throw (err);
             }
@@ -54,16 +63,35 @@ namespace Datos
         public Entidad.Usuarios GetCedula(String Cod_Cedula)
         {
             // Este método Obtiene de la base de datos un usuario meidante un pàrametro desde la capa de Negocio
+ 	    Entidad.BD_EvaluacionEntities dc = null;
+            Entidad.Usuarios user = null;
+            try
+            {
+ 		        dc = new Entidad.BD_EvaluacionEntities();
+                user = dc.Usuarios.Where(u => u.Cedula == Cod_Cedula && u.Estado < 3).FirstOrDefault();
+                return user;
+            }
+            catch (Exception err)
+            {
+                throw new Exception("Error al ejecutar update en Usuarios////Detalle: " + err.Message);
+            }
+            finally
+            {
+                if (dc != null)
+                    dc.Dispose();
+            }
+        }
+
+        public Entidad.Usuarios GetUsuario(string userLogin)
+        {
 
             Entidad.BD_EvaluacionEntities dc = null;
             Entidad.Usuarios user = null;
             try
             {
-
                 dc = new Entidad.BD_EvaluacionEntities();
-                user = dc.Usuarios.Where(u => u.Cedula == Cod_Cedula && u.Estado < 3).FirstOrDefault();
+                user = dc.Usuarios.Where(u => u.Login == userLogin).FirstOrDefault();
                 return user;
-
             }
             catch (Exception err)
             {
@@ -85,6 +113,7 @@ namespace Datos
             {
                 throw (err);
             }
+
 
         }
 
@@ -179,5 +208,7 @@ namespace Datos
                     dc.Dispose();
             }
         }
+
+
     }
 }

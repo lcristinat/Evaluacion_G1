@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace Negocio
 {
-   public class UsuarioNegocio
+    public class UsuarioNegocio
     {
         public Entidad.Usuarios ObtenerUsuario(int codigo_usua)
         {
-       
+
             Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
             try
             {
-              return dc.GetList().Where(a => a.Usuarios1 == codigo_usua && a.Estado<3).FirstOrDefault();
+                return dc.GetList().Where(a => a.Usuarios1 == codigo_usua && a.Estado < 3).FirstOrDefault();
             }
             catch (Exception err)
             {
@@ -52,7 +52,7 @@ namespace Negocio
 
         public Entidad.Usuarios ObtenerCedula(String Codigo_Cedula)
         {
-           
+
             Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
             try
             {
@@ -101,37 +101,12 @@ namespace Negocio
             }
             catch (Exception err)
             {
-
-                throw (err);
+                throw err;
             }
         }
 
-        public string Agregar(Entidad.Usuarios Usua)
-        {
-            try
-            {
-                string resp = "";
-               
-                    Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
-                    Entidad.Usuarios userBD = dc.GetUsuario(Usua.Login);
-                    if (userBD == null)
-                    {
-                        Usua.Clave = CreateMD5(Usua.Clave);
-                        dc.Insert(Usua);
-                        resp = "1";
-                    }
-                
-                return resp;
-
-            }
-            catch (Exception err)
-            {
-                throw (err);
-            }
-
-        }
-
-        protected static string CreateMD5(string input)
+        //****
+        public string CreateMD5(string input)
         {
             // Use input string to calculate MD5 hash
             MD5 md5 = System.Security.Cryptography.MD5.Create();
@@ -146,6 +121,132 @@ namespace Negocio
             }
             return sb.ToString();
         }
+
+        /// <summary>
+        /// Método para validar si existe el usuario 
+        /// </summary>
+        /// <param name="Login">Usuario</param>
+        /// <returns>0- Usuario no existe / 1- Usuario existe / 3- Usuario existe pero está inactivo</returns>
+        public int existeUsuario(string Login)
+        {
+            Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
+            try
+            {
+                int resp = 0;
+                Entidad.Usuarios usuario = dc.GetUsuario(Login);
+
+                //si usuario es distinto de null, existe y se procede a validar que este activo
+                if (usuario != null)
+                {
+                    //si usuario esta activo se devuelve 1
+                    if (usuario.Estado == 1)
+                    {
+                        resp = 1;
+                    }
+                    //de lo contrario se devuelve 3 que significa que es un usuario inactivo
+                    else
+                    {
+                        resp = 3;
+                    }
+                }
+                return resp;
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
+        }
+
+        /// <summary>
+        /// Método que se utiliza para validar si el password y el usuario son correctos
+        /// </summary>
+        /// <param name="login">Usuario</param>
+        /// <param name="password">Contraseña</param>
+        /// <returns>1- datos correctos / 0- Datos incorrectos</returns>
+        public int validaDatos(string login, string password)
+        {
+            Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
+            try
+            {
+                int resp = 0;
+                List<Entidad.Usuarios> listaUsuario = dc.GetList();
+                //si login y password coinciden se retorna 1
+                if (listaUsuario.Exists(u => u.Login == login && u.Clave == password))
+                {
+                    resp = 1;
+                }
+                return resp;
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
+        }
+
+        /// <summary>
+        /// Metodo que retorna el id del registro según login y password
+        /// </summary>
+        /// <param name="login">Login</param>
+        /// <returns>Retorna el identificador del registro</returns>
+        public int devolverID(string login)
+        {
+            Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
+            try
+            {
+                return dc.GetList().Where(u => u.Login == login).FirstOrDefault().Usuarios1;
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
+        }
+
+        /// <summary>
+        /// Método que devuelve la entidad mediante el identificador del registro
+        /// </summary>
+        /// <param name="idUsuario">Identificador del registro</param>
+        /// <returns>Entidad del tipo usuario</returns>
+        public Entidad.Usuarios devolverUsuario(int idUsuario)
+        {
+            Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
+            try
+            {
+                return dc.GetList().Where(u => u.Usuarios1 == idUsuario).FirstOrDefault();
+
+            }
+            catch (Exception err)
+            {
+
+                throw (err);
+            }
+        }
+
+        public string Agregar(Entidad.Usuarios Usua)
+        {
+            try
+            {
+                string resp = "";
+
+                Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
+                Entidad.Usuarios userBD = dc.GetUsuario(Usua.Login);
+                if (userBD == null)
+                {
+                    Usua.Clave = Usua.Clave;
+                    dc.Insert(Usua);
+                    resp = "1";
+                }
+
+                return resp;
+
+            }
+            catch (Exception err)
+            {
+                throw (err);
+            }
+
+        }
+
+        
         public string ValidarCedula(string numeroCedula)
         {
             string respuesta = "";
@@ -162,6 +263,8 @@ namespace Negocio
                 {
                     respuesta = "2";
                 }
+
+
             }
             catch (Exception err)
             {
@@ -171,5 +274,41 @@ namespace Negocio
             return respuesta;
         }
 
+
+        /// <summary>
+        /// Llamado al metodo actualizar usuario de la capa de datos
+        /// </summary>
+        /// <param name="usuario">Entidad de tipo usuario</param>
+        public void actualizarUsuario(Entidad.Usuarios usuario)
+        {
+            Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
+            try
+            {
+                dc.Update(usuario);
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
+        }
+
+        /// <summary>
+        /// LLamado al método listUsuario de la capa de datos
+        /// </summary>
+        /// <returns>Lista de usuarios</returns>
+        public List<Entidad.Usuarios> listaUsuario()
+        {
+            Datos.UsuarioDatos dc = new Datos.UsuarioDatos();
+            try
+            {
+                return dc.GetList();
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
+        }
+
     }
 }
+

@@ -33,6 +33,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -76,6 +77,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -211,11 +213,23 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Imagenes\uca logo.png" />
+    <Content Include="wfAgregarCliente.aspx" />
     <Content Include="wfBase.aspx" />
+    <Content Include="wfCambioClave.aspx" />
+    <Content Include="wfEditarCliente.aspx" />
+    <Content Include="wfEliminarCliente.aspx" />
     <Content Include="wfGrid.aspx" />
     <Content Include="wfUsuarioActualizar.aspx" />
     <Content Include="wfUsuarioEliminar.aspx" />
     <Content Include="wfUsuarioInsertar.aspx" />
+    <Content Include="wfLogin.aspx" />
+    <Content Include="wfProductoActualizar.aspx" />
+    <Content Include="wfProductoEliminar.aspx" />
+    <Content Include="wfProductoInsertar.aspx" />
+    <Content Include="wfProductoReporte.aspx" />
+    <Content Include="wfReporteCliente.aspx" />
+    <Content Include="wfReporteUsuarios.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -424,12 +438,40 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="wfAgregarCliente.aspx.cs">
+      <DependentUpon>wfAgregarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfAgregarCliente.aspx.designer.cs">
+      <DependentUpon>wfAgregarCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="wfBase.aspx.cs">
       <DependentUpon>wfBase.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="wfBase.aspx.designer.cs">
       <DependentUpon>wfBase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfCambioClave.aspx.cs">
+      <DependentUpon>wfCambioClave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfCambioClave.aspx.designer.cs">
+      <DependentUpon>wfCambioClave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfEditarCliente.aspx.cs">
+      <DependentUpon>wfEditarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfEditarCliente.aspx.designer.cs">
+      <DependentUpon>wfEditarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfEliminarCliente.aspx.cs">
+      <DependentUpon>wfEliminarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfEliminarCliente.aspx.designer.cs">
+      <DependentUpon>wfEliminarCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="wfGrid.aspx.cs">
       <DependentUpon>wfGrid.aspx</DependentUpon>
@@ -459,6 +501,55 @@
     <Compile Include="wfUsuarioInsertar.aspx.designer.cs">
       <DependentUpon>wfUsuarioInsertar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="wfLogin.aspx.cs">
+      <DependentUpon>wfLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfLogin.aspx.designer.cs">
+      <DependentUpon>wfLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfProductoActualizar.aspx.cs">
+      <DependentUpon>wfProductoActualizar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfProductoActualizar.aspx.designer.cs">
+      <DependentUpon>wfProductoActualizar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfProductoEliminar.aspx.cs">
+      <DependentUpon>wfProductoEliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfProductoEliminar.aspx.designer.cs">
+      <DependentUpon>wfProductoEliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfProductoInsertar.aspx.cs">
+      <DependentUpon>wfProductoInsertar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfProductoInsertar.aspx.designer.cs">
+      <DependentUpon>wfProductoInsertar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfProductoReporte.aspx.cs">
+      <DependentUpon>wfProductoReporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfProductoReporte.aspx.designer.cs">
+      <DependentUpon>wfProductoReporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfReporteCliente.aspx.cs">
+      <DependentUpon>wfReporteCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfReporteCliente.aspx.designer.cs">
+      <DependentUpon>wfReporteCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfReporteUsuarios.aspx.cs">
+      <DependentUpon>wfReporteUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfReporteUsuarios.aspx.designer.cs">
+      <DependentUpon>wfReporteUsuarios.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -477,6 +568,10 @@
       <Name>Negocio</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="rptProducto.rdlc" />
+    <EmbeddedResource Include="Report1.rdlc" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -492,7 +587,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>52441</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:52441/</IISUrl>
+          <IISUrl>http://localhost:4356/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
