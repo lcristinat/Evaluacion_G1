@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+
+  <Width>6.5in</Width>
+  <Body>
+    <Height>2in</Height>
+  </Body>
+  <rd:ReportTemplate>true</rd:ReportTemplate>
+  <Page>
+  </Page>
+</Report>
+
   <Body>
     <ReportItems>
       <Tablix Name="Tablix1">
@@ -751,3 +761,4 @@ iIiIpDA0EBERkRSGBiIiIpLC0EBERERSGBqIiIhICkMDERERSWFoICIiIikMDURERCSFoYGIiIikMDQQ
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>1c2a8cd1-4f87-4dda-b157-b63c700310b0</rd:ReportID>
 </Report>
+

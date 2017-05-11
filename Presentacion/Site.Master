@@ -52,13 +52,49 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a runat="server" href="#">Opción 1</a></li>
+                        <li><a runat="server" href="#">Facturacion</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Opción 2 Despleglable<span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Productos<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Sub-1</a></li>
-                                <li><a href="#">Sub-2</a></li>
-                                <li><a href="#">Sub 3</a></li>
+                                <li><a href="wfProductoInsertar.aspx">Agregar</a></li>
+                                <li><a href="wfProductoActualizar.aspx">Actualizar</a></li>
+                                <li><a href="wfProductoEliminar.aspx">Eliminar</a></li>
+
+                            </ul>
+                          </li>
+                         <li class="dropdown">
+                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clientes<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                 <li><a href="wfAgregarCliente.aspx">Agregar</a></li>
+                                <li><a href="wfEditarCliente.aspx">Actualizar</a></li>
+                                <li><a href="wfEliminarCliente.aspx">Eliminar</a></li>
+
+                            </ul>
+                          </li>
+                         <li class="dropdown">
+                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuarios<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                 <li><a href="wfUsuarioInsertar.aspx">Agregar</a></li>
+                                <li><a href="wfUsuarioActualizar.aspx">Actualizar</a></li>
+                                <li><a href="wfUsuarioEliminar.aspx">Eliminar</a></li>
+
+                            </ul>
+                            </li>
+                         <li class="dropdown">
+                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Empleados<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                 <li><a href="#">Agregar</a></li>
+                                <li><a href="#">Actualizar</a></li>
+                                <li><a href="#">Eliminar</a></li>
+
+                            </ul>
+                        </li>
+                         <li class="dropdown">
+                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reportes<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                 <li><a href="wfProductoReporte.aspx">Producto</a></li>
+                                <li><a href="wfReporteCliente.aspx">Clientes</a></li>
+                                <li><a href="wfReporteUsuarios.aspx">Usuarios</a></li>
 
                             </ul>
                         </li>

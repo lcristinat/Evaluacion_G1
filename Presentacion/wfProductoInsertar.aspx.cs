@@ -14,12 +14,6 @@ namespace Presentacion
 
         }
 
-        /*protected void btnConfirmar_Click(object sender, EventArgs e)
-        {
-
-           
-        }*/
-
         public void limpiarFormulario()
         {
 
@@ -29,13 +23,7 @@ namespace Presentacion
             
         } // fin del método limpiarFormulario
 
-        /*protected void btnCancelar_Click(object sender, EventArgs e)
-        {
-
-            
-
-        }*/
-
+     
         protected void btnConfirmar_Click1(object sender, EventArgs e)
         {
 
