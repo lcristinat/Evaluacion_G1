@@ -74,9 +74,12 @@ namespace Negocio
                 int resp = 0;
                 List<Entidad.Usuarios> listaUsuario = dc.GetList();
                 //si login y password coinciden se retorna 1
-                if (listaUsuario.Exists(u => u.Login == login && u.Clave == password))
+                if (listaUsuario.Count > 0)
                 {
-                    resp = 1;
+                    if (listaUsuario.Exists(u => u.Login == login && u.Clave == password))
+                    {
+                        resp = 1;
+                    }
                 }
                 return resp;
             }

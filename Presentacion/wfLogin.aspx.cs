@@ -70,9 +70,18 @@ namespace Presentacion
                 }
                 else
                 {
-                    Session.Add("sessionIDUsuario", dc.devolverID(login));
-                    Response.Redirect("wfCambioClave.aspx");
+                    if (dc.validaDatos(login, password) == 1)
+                    {
+                        Session.Add("sessionIDUsuario", dc.devolverID(login));
+                        Response.Redirect("wfCambioClave.aspx");
+                    }
+                    else
+                    {
+                        lblMensaje.Text = "Usuario o contraseña incorrectos";
+                    }
                 }
+                    
+                    
             }
             catch (Exception err)
             {
