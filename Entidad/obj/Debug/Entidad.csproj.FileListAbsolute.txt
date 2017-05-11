@@ -34,8 +34,7 @@ D:\VSProjects\Evaluacion\Entidad\bin\Debug\es\EntityFramework.SqlServer.resource
 D:\VSProjects\Evaluacion\Entidad\obj\Debug\Entidad.csprojResolveAssemblyReference.cache
 D:\VSProjects\Evaluacion\Entidad\obj\Debug\Entidad.dll
 D:\VSProjects\Evaluacion\Entidad\obj\Debug\Entidad.pdb
-<<<<<<< HEAD
-=======
+
 C:\evalua\Entidad\bin\Debug\Entidad.dll.config
 C:\evalua\Entidad\bin\Debug\Entidad.dll
 C:\evalua\Entidad\bin\Debug\Entidad.pdb
@@ -60,4 +59,4 @@ C:\Git2015\evaluacionG1\Entidad\bin\Debug\es\EntityFramework.SqlServer.resources
 C:\Git2015\evaluacionG1\Entidad\obj\Debug\Entidad.csprojResolveAssemblyReference.cache
 C:\Git2015\evaluacionG1\Entidad\obj\Debug\Entidad.dll
 C:\Git2015\evaluacionG1\Entidad\obj\Debug\Entidad.pdb
->>>>>>> 3b446beed9d607d8e6c08164be6e9fab9258b5e0
+
