@@ -61,7 +61,7 @@ namespace Presentacion
                         Entidad.Usuarios u = new Entidad.Usuarios();
                         u.Nombre = txtNombre.Text.Trim().ToUpper();
                         u.Login = txtLogin.Text.Trim().ToUpper();
-                        u.Clave = txtClave.Text.Trim();
+                        u.Clave = "EVALUACION";
                         u.Cedula = cadena_cedula.ToUpper();
                         u.FechaProceso = DateTime.Now;
                         u.Estado = 1;

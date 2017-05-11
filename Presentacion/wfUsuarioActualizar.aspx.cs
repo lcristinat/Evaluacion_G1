@@ -93,11 +93,11 @@ namespace Presentacion
                     txtCodigo.Text = c.Usuarios1.ToString();
                     txtNombre.Text = c.Nombre;
                     txtNumeroCedula.Text = c.Cedula;
-                    txtLogin.Text = c.Login;
-                    txtClave.Text = c.Clave;
+                    //txtLogin.Text = c.Login;
+                    //txtClave.Text = c.Clave;
                     txtCodigo.ReadOnly = true;
                     btnGuardar.Enabled = true;
-                    Limpiar_Controles(this.Controls);
+                    //Limpiar_Controles(this.Controls);
                 }
             }
             catch (Exception err)

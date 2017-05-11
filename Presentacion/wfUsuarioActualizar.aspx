@@ -27,27 +27,6 @@
                      </div>
                 </div>
             </fieldset>
-            <fieldset class="form-group">
-                <legend>Datos de Acceso</legend>
-                <div class="col-lg-3">
-                    <div class="form-group">
-                        <label class="control-label">Usuario</label>
-                        <asp:TextBox ID="txtLogin" runat="server" class="form-control" placeholder="Login"  Style="text-transform: uppercase" ></asp:TextBox>
-                         <%--<asp:RequiredFieldValidator ID="rvLogin" runat="server" ControlToValidate="txtLogin" ErrorMessage="Login es requerido" ForeColor="Red">*</asp:RequiredFieldValidator>--%>
-                    </div>
-                </div>
-                 
-                <div class="col-lg-3">
-                    <div class="form-group">
-                        <label class="control-label">Clave</label>
-                        <asp:TextBox ID="txtClave" runat="server" class="form-control" TextMode="Password" placeholder="Clave" ></asp:TextBox>
-                         <%--<asp:RequiredFieldValidator ID="rvClave" runat="server" ControlToValidate="txtClave" ErrorMessage="Clave es requerida" ForeColor="Red">*</asp:RequiredFieldValidator>--%>
-                    </div>
-                </div>
-               
-            </fieldset>
-            
-            <br />
             <div class="col-lg-3">
                 <div class="form-group">
                     <asp:Button ID="btnGuardar" runat="server" Text="Actualizar" class="btn btn-success" OnClick="btnGuardar_Click" />
