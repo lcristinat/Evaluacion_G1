@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="1e70cf0dd51842df817853da2ffd9285" Name="Diagram1">
         <EntityTypeShape EntityType="BD_EvaluacionModel.Clientes" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_EvaluacionModel.Empleados" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_EvaluacionModel.Empleados" Width="1.375" PointX="6.5" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="BD_EvaluacionModel.Factura_Detalle" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="BD_EvaluacionModel.Facturas" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="BD_EvaluacionModel.Productos" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
