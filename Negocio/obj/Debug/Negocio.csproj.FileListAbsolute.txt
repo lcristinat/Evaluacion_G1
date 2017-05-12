@@ -50,3 +50,16 @@ C:\EvaGrupo1\Sistema_Evaluacion\Negocio\bin\Debug\Entidad.pdb
 C:\EvaGrupo1\Sistema_Evaluacion\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 C:\EvaGrupo1\Sistema_Evaluacion\Negocio\obj\Debug\Negocio.dll
 C:\EvaGrupo1\Sistema_Evaluacion\Negocio\obj\Debug\Negocio.pdb
+D:\Git\ProyectoGit\Evaluacion_G1\Negocio\bin\Debug\Negocio.dll
+D:\Git\ProyectoGit\Evaluacion_G1\Negocio\bin\Debug\Negocio.pdb
+D:\Git\ProyectoGit\Evaluacion_G1\Negocio\bin\Debug\Datos.dll
+D:\Git\ProyectoGit\Evaluacion_G1\Negocio\bin\Debug\Entidad.dll
+D:\Git\ProyectoGit\Evaluacion_G1\Negocio\bin\Debug\EntityFramework.dll
+D:\Git\ProyectoGit\Evaluacion_G1\Negocio\bin\Debug\Datos.pdb
+D:\Git\ProyectoGit\Evaluacion_G1\Negocio\bin\Debug\Entidad.pdb
+D:\Git\ProyectoGit\Evaluacion_G1\Negocio\bin\Debug\EntityFramework.xml
+D:\Git\ProyectoGit\Evaluacion_G1\Negocio\bin\Debug\es\EntityFramework.resources.dll
+D:\Git\ProyectoGit\Evaluacion_G1\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+D:\Git\ProyectoGit\Evaluacion_G1\Negocio\obj\Debug\Negocio.dll
+D:\Git\ProyectoGit\Evaluacion_G1\Negocio\obj\Debug\Negocio.pdb
+D:\Git\ProyectoGit\Evaluacion_G1\Negocio\bin\Debug\Negocio.dll.config

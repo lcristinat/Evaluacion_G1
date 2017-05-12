@@ -14,6 +14,8 @@ namespace Entidad
     
     public partial class Empleados
     {
+        public int estado;
+
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Cedula { get; set; }

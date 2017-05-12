@@ -55,6 +55,7 @@
     <Compile Include="Entidad\Conexion.cs" />
     <Compile Include="productoDatos.cs" />
     <Compile Include="ClienteDatos.cs" />
+    <Compile Include="EmpleadoDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioDatos.cs" />
   </ItemGroup>
@@ -66,7 +67,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <Fakes Include="Fakes\EntityFramework.fakes" />
+    <Fakes Include="Fakes\EntityFramework.fakes">
+      <SubType>Designer</SubType>
+    </Fakes>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

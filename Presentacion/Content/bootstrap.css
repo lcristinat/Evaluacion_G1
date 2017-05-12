@@ -786,6 +786,7 @@ pre code {
 .row {
   margin-right: -15px;
   margin-left: -15px;
+    height: 146px;
 }
 
 .row:before,
@@ -860,6 +861,10 @@ pre code {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+    top: 34px;
+    left: -1px;
+    height: 68px;
+    width: 919px;
 }
 
 .col-xs-1,
@@ -1718,8 +1723,6 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .form-control {
   display: block;
-  width: 100%;
-  height: 34px;
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.428571429;
@@ -1754,6 +1757,7 @@ textarea.form-control {
 
 .form-group {
   margin-bottom: 15px;
+    height: 57px;
 }
 
 .radio,
@@ -3946,6 +3950,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .nav-justified {
   width: 100%;
+    height: 131px;
 }
 
 .nav-justified > li {
@@ -5336,6 +5341,7 @@ a.list-group-item:focus {
 
 .panel-body {
   padding: 15px;
+    height: 462px;
 }
 
 .panel-body:before,
