@@ -6,6 +6,7 @@
         <div class="panel-body">
             <fieldset class="form-group">
                 <legend>Datos Generales</legend>
+
                 <div class="col-lg-3">
                     <div class="form-group">
                         <label class="control-label">Primer Nombre</label>
